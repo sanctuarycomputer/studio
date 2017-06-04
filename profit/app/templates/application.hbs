@@ -1,0 +1,49 @@
+{{#paper-form as |form|}}
+  <div class="layout-row">
+    <div class="layout-column flex-50">
+      {{form.input label="Total Studio Income" value=studio.income onChange=(action (mut studio.income))}}
+      {{form.input label="Total Cost of Labor" value=studio.laborCost onChange=(action (mut studio.laborCost))}}
+      {{form.input label="Total Studio Expenses" value=studio.expenses onChange=(action (mut studio.expenses))}}
+    </div>
+  </div>
+{{/paper-form}}
+
+<h1>Total Income: {{format-money studio.income}}</h1>
+<h1>Labor Cost: {{format-money studio.laborCost}}</h1>
+<h1>Monthly Labor Cost: {{format-money studio.monthlyLaborCost}}</h1>
+<h1>Expenses: {{format-money studio.expenses}}</h1>
+
+<hr />
+
+<h1>Raw Efficiency: {{studio.rawEfficiency}}</h1>
+<h1>Studio Efficiency: {{studio.efficiency}}</h1>
+<h1>Total Profit: {{format-money studio.totalProfit}}</h1>
+<h1>Following Year Studio Buffer: {{format-money studio.allowances.buffer}}</h1>
+<h1>Studio Upgrade Budget: {{format-money studio.allowances.upgradeBudget}}</h1>
+
+<hr />
+
+<h1>Profit Share Pool: {{format-money studio.allowances.pool}}</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Months @ SC</th>
+      <th>PSU Earned</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each studio.technologists as |technologist|}}
+    <tr>
+      <td>{{technologist.name}}</td>
+      <td>{{technologist.monthsAtSanctu}}</td>
+      <td>{{technologist.psu}}</td>
+      <td>{{format-money technologist.profitShare}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+  {{studio.totalPSUIssued}}
+</table>
