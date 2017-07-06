@@ -1,1 +1,98 @@
-@import 'ember-paper';
+:root {
+  --light-gray: #F4F4F4;
+  --medium-gray: #C8C8C8;
+  --dark-gray: #3B3B3B;
+  --dark-navy: #173963;
+}
+
+::selection {
+  background: var(--dark-navy); /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: var(--dark-navy); /* Gecko Browsers */
+  color: white;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-ember-action] {
+  cursor: pointer;
+  transition: 120ms ease-in-out;
+  &:hover:not(.active) { opacity: 0.4; }
+}
+
+.scenario.active {
+  background-color: var(--dark-navy);
+  h3, p { color: white; }
+}
+
+// Used for Inline Editing in the Technologists Table
+input.inline {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  color: var(--dark-gray);
+  font-family: "Atlas Grotesk", sans-serif;
+  outline: none;
+  background-color: transparent;
+  border-style: solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--dark-gray);
+}
+
+h1, h2, h3, h4, h5, h6, p, label, input {
+  color: var(--dark-gray);
+  font-family: "Atlas Grotesk", sans-serif;
+  &.lighter { font-weight: lighter; }
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.serif {
+  font-family: "Austin News Deck", serif;
+  &.lighter { font-weight: lighter; }
+}
+
+label {
+  font-size: 1em;
+  input {
+    outline: none;
+    display: block;
+    font-size: 2em;
+    border: none;
+    &[disabled] {
+      color: var(--medium-gray);
+    }
+  }
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.border-medium-gray {
+  border: 1px solid var(--medium-gray);
+}
+
+.caps {
+  letter-spacing: 0.1em !important;
+}
+
+@import 'components/nav-bar';
+@import 'global/fonts';
+
+hr {
+  border-bottom: 0;
+  border-style: solid;
+  border-color: var(--medium-gray);
+}
+
+

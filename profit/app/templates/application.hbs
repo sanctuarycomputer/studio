@@ -1,49 +1,170 @@
-{{#paper-form as |form|}}
-  <div class="layout-row">
-    <div class="layout-column flex-50">
-      {{form.input label="Total Studio Income" value=studio.income onChange=(action (mut studio.income))}}
-      {{form.input label="Total Cost of Labor" value=studio.laborCost onChange=(action (mut studio.laborCost))}}
-      {{form.input label="Total Studio Expenses" value=studio.expenses onChange=(action (mut studio.expenses))}}
+{{nav-bar}}
+
+<div class='max-width-4 mx-auto pt4'>
+
+  <!-- Spacer for the Nav -->
+  <div class='clearfix mt4 mb4'>
+    <p>Short rant about profit</p>
+  </div>
+
+  <!-- Core Inputs -->
+  <div class='clearfix mb3'>
+    <h2>Core Inputs</h2>
+    <hr />
+    <p class='mb3'>
+      Edit these (or run a scenario below) to see how it pans out.
+    </p>
+    <div class='col col-4 mb2'>
+      <label>
+        Total Studio Income
+        {{input value=studio.income key-up=(route-action 'setNumeric' 'income')}}
+      </label>
+    </div>
+    <div class='col col-4 mb2'>
+      <label>
+        Total Non-Salary Expenses
+        {{input value=studio.expenses key-up=(route-action 'setNumeric' 'expenses')}}
+      </label>
+    </div>
+    <div class='col col-4 mb2'>
+      <label>
+        Total Salary Costing (determined below)
+        {{input value=studio.laborCost disabled=true}}
+      </label>
     </div>
   </div>
-{{/paper-form}}
 
-<h1>Total Income: {{format-money studio.income}}</h1>
-<h1>Labor Cost: {{format-money studio.laborCost}}</h1>
-<h1>Monthly Labor Cost: {{format-money studio.monthlyLaborCost}}</h1>
-<h1>Expenses: {{format-money studio.expenses}}</h1>
-
-<hr />
-
-<h1>Raw Efficiency: {{studio.rawEfficiency}}</h1>
-<h1>Studio Efficiency: {{studio.efficiency}}</h1>
-<h1>Total Profit: {{format-money studio.totalProfit}}</h1>
-<h1>Following Year Studio Buffer: {{format-money studio.allowances.buffer}}</h1>
-<h1>Studio Upgrade Budget: {{format-money studio.allowances.upgradeBudget}}</h1>
-
-<hr />
-
-<h1>Profit Share Pool: {{format-money studio.allowances.pool}}</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Months @ SC</th>
-      <th>PSU Earned</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    {{#each studio.technologists as |technologist|}}
-    <tr>
-      <td>{{technologist.name}}</td>
-      <td>{{technologist.monthsAtSanctu}}</td>
-      <td>{{technologist.psu}}</td>
-      <td>{{format-money technologist.profitShare}}</td>
-    </tr>
+  <!-- Scenario Runs -->
+  <div class='clearfix mb3'>
+    <h2>Scenarios</h2>
+    <hr />
+    <p>
+      Run a sample scenario below to see how the profit share pans out. These only effect "Total Studio Income".
+    </p>
+    {{#each studio.scenarios as |scenario|}}
+      <div class='col col-6 p1 center'>
+        <div class='scenario inner p2 border-medium-gray bg-light-gray {{if (eq scenario studio.selectedScenario) "active"}}' {{action (route-action 'applyScenario' scenario)}}>
+          <h3 class='serif lighter'>{{scenario.title}}</h3>
+          <p>{{scenario.description}}</p>
+        </div>
+      </div>
     {{/each}}
-  </tbody>
+  </div>
 
-  {{studio.totalPSUIssued}}
-</table>
+  <!-- Team Table -->
+  <div class='clearfix mb3'>
+    <h2>Sanctuary Team</h2>
+    <hr />
+    <p>
+      The below is an example team of technologists to run the calculations against.
+    </p>
+    {{#each studio.technologists as |technologist|}}
+      <div class='col col-12 p1'>
+        <div class='bg-light-gray inner py1 px2 clearfix flex'>
+          <div class='col col-2 flex items-center'>
+            {{#if (eq editing technologist)}}
+              {{input value=technologist.name class='inline'}}
+            {{else}}
+              <h3>{{technologist.name}}</h3>
+            {{/if}}
+          </div>
+          <div class='col col-4 center'>
+            <h5>{{technologist.monthsAtSanctu}} Months / PSU</h5>
+          </div>
+          <div class='col col-4 center'>
+            <h5>{{format-money technologist.salary}}</h5>
+          </div>
+          <div class='col col-1 caps right-align'>
+            {{#if (eq editing technologist)}}
+              <h6 {{action (route-action 'stopEditingTeamMember')}}>OK</h6>
+            {{else}}
+              <h6 {{action (route-action 'editTeamMember' technologist)}}>Edit</h6>
+            {{/if}}
+          </div>
+          <div class='col col-1 caps right-align'>
+            <h6 {{action (route-action 'removeTeamMember' technologist)}}>Remove</h6>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+    <div class='col col-12 center p1' {{action (route-action 'addTeamMember')}}>
+      <div class='bg-light-gray border-medium-gray inner py1 px3 clearfix center'>
+        <h3>+ Add Team Member</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Metrics -->
+  <div class='clearfix mb3'>
+    <h2 class='pl1'>Calculated Metrics</h2>
+    <hr />
+    <p class='pl1'>
+      The below metrics are key in calculating how profit is divided.
+    </p>
+
+    <div class='col col-6 p1 center'>
+      <div class='bg-light-gray border-medium-gray inner p2'>
+        <h3>Raw Efficiency</h3>
+        <p>This is a simple metric based on income vs expenses</p>
+        <h4>{{studio.rawEfficiency}}</h4>
+      </div>
+    </div>
+
+    <div class='col col-6 p1 center'>
+      <div class='bg-light-gray border-medium-gray inner p2'>
+        <h3>Normalized Efficiency</h3>
+        <p>This metric is normalized to be more insightful</p>
+        <h4>{{studio.efficiency}}</h4>
+      </div>
+    </div>
+
+    <div class='col col-6 p1 center'>
+      <div class='bg-light-gray border-medium-gray inner p2'>
+        <h3>Payroll Buffer</h3>
+        <p>Needed to safely make payroll for {{studio.desiredPayrollBufferMonths}} months</p>
+        <h4>{{format-money studio.allowances.buffer}}</h4>
+      </div>
+    </div>
+
+    <div class='col col-6 p1 center'>
+      <div class='bg-light-gray border-medium-gray inner p2'>
+        <h3>Internals Budget</h3>
+        <p>An allowance for upgrading the studio, etc</p>
+        <h4>{{format-money studio.allowances.upgradeBudget}}</h4>
+      </div>
+    </div>
+
+    <div class='col col-6 p1 center'>
+      <div class='bg-light-gray border-medium-gray inner p2'>
+        <h3>Total PSU Issued</h3>
+        <p>The total PSU issed across the team</p>
+        <h4>{{studio.totalPSUIssued}}</h4>
+      </div>
+    </div>
+
+    <div class='col col-6 p1 center'>
+      <div class='bg-light-gray border-medium-gray inner p2'>
+        <h3>Value per PSU</h3>
+        <p>How much profit each PSU is worth</p>
+        <h4>{{studio.actualValuePerPSU}}</h4>
+      </div>
+    </div>
+
+    <div class='col col-6 p1 center'>
+      <div class='bg-light-gray border-medium-gray inner p2'>
+        <h3>Total Profit Share Pool</h3>
+        <p>The money put aside for for profit sharing</p>
+        <h4>{{format-money studio.allowances.pool}}</h4>
+      </div>
+    </div>
+
+    <div class='col col-6 p1 center'>
+      <div class='bg-light-gray border-medium-gray inner p2'>
+        <h3>Reinvestment Fund</h3>
+        <p>Money remaining to do super weird things</p>
+        <h4>{{format-money studio.allowances.investment}}</h4>
+      </div>
+    </div>
+
+  </div>
+</div>

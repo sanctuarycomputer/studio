@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'Austin News Deck';
+	src: url('AustinNewsDeck-Light-Web.eot');
+	src: local('Austin News Deck'), local('Austin News Deck Light'),
+		url('/fonts/AustinNewsDeck-Light-Web.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/AustinNewsDeck-Light-Web.woff2') format('woff2'),
+		url('/fonts/AustinNewsDeck-Light-Web.woff') format('woff'),
+		url('/fonts/AustinNewsDeck-Light-Web.ttf') format('truetype'),
+		url('/fonts/AustinNewsDeck-Light-Web.svg#Calibre-Black') format('svg');
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Austin News Deck';
+	src: url('AustinNewsDeck-Roman-Web.eot');
+	src: local('Austin News Deck'), local('Austin News Deck Roman'),
+		url('/fonts/AustinNewsDeck-Roman-Web.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/AustinNewsDeck-Roman-Web.woff2') format('woff2'),
+		url('/fonts/AustinNewsDeck-Roman-Web.woff') format('woff'),
+		url('/fonts/AustinNewsDeck-Roman-Web.ttf') format('truetype'),
+		url('/fonts/AustinNewsDeck-Roman-Web.svg#Calibre-Black') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Grotesk';
+  src: url('/fonts/AtlasGroteskRegular.eot');
+  src: url('/fonts/AtlasGroteskRegular.eot') format('embedded-opentype'),
+       url('/fonts/AtlasGroteskRegular.woff2') format('woff2'),
+       url('/fonts/AtlasGroteskRegular.woff') format('woff'),
+       url('/fonts/AtlasGroteskRegular.ttf') format('truetype'),
+       url('/fonts/AtlasGroteskRegular.svg#AtlasGroteskRegular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atlas Grotesk';
+  src: url('/fonts/AtlasGroteskLight.eot');
+  src: url('/fonts/AtlasGroteskLight.eot') format('embedded-opentype'),
+       url('/fonts/AtlasGroteskLight.woff2') format('woff2'),
+       url('/fonts/AtlasGroteskLight.woff') format('woff'),
+       url('/fonts/AtlasGroteskLight.ttf') format('truetype'),
+       url('/fonts/AtlasGroteskLight.svg#AtlasGroteskLight') format('svg');
+  font-weight: lighter;
+  font-style: normal;
+}
