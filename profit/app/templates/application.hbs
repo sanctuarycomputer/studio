@@ -1,49 +1,99 @@
-{{nav-bar}}
+{{nav-bar studio=studio setNumeric=(route-action 'setNumeric')}}
 
 <div class='max-width-4 mx-auto pt4'>
 
   <!-- Spacer for the Nav -->
-  <div class='clearfix mt4 mb4'>
-    <p>Short rant about profit</p>
+  <div class='clearfix mt4 mb4 px2'>
+    <h2>What is This?</h2>
+    <hr />
+    <div class='col col-12 sm-col-8 pr2'>
+      <p class='line-height'>
+        At <a href='https://sanctuary.computer' target='_blank'>Sanctuary Computer</a>, we
+        believe there's a better work environment than the poles of freelancing, or working
+        a fulltime job. We think that when talented and creative people
+        can see the effects of their skill and ability effect the bottom line, and
+        feel true ownership in their work, they will naturally make better decisions for
+        clients, the studio, and themselves.
+      </p>
+      <p class='line-height'>
+        There's big impacts for the studio, too! As a company, we're able to offset
+        risk by providing greater incentive for reward at the end of the year. We're
+        able to lower stress and worry less, knowing that everyone on the team understands
+        how our bottom lines work, and has empathy for the ups and downs of businesses.
+        <a href='https://medium.com/sanctuary-computer-inc/were-open-sourcing-our-digital-studio-d33b5511bbb7' target='_blank'>
+          Transparency is a big thing for us.
+        </a>
+      </p>
+      <p class='line-height'>
+        We've always been about making Sanctuary an exciting alternative for creative people,
+        and for that reason, we believe a profit share makes for an interesting and exciting
+        way forward.
+      </p>
+      <p class='line-height'>
+        <a href='https://github.com/sanctuarycomputer/studio' target='_blank'>
+          And of course, all of this code is available on Github.
+        </a>
+      </p>
+    </div>
+    <div class='col col-12 sm-col-4'>
+      <img class='fit mt2' src='https://cdn-images-1.medium.com/max/1200/1*evFjHUVX9xblQxM8EVqDSA.gif' />
+    </div>
   </div>
 
-  <!-- Core Inputs -->
-  <div class='clearfix mb3'>
-    <h2>Core Inputs</h2>
+  <!-- 1 PSU per Month -->
+  <!-- Salary Cap @ 90k -->
+  <!-- Calculated in November & Paid EOY -->
+  <div class='clearfix mb3 px2'>
+    <h2>How it Works</h2>
     <hr />
-    <p class='mb3'>
-      Edit these (or run a scenario below) to see how it pans out.
+    <p class='line-height'>
+      It's actually a really simple metric, designed to balance studio efficiency against profit.
     </p>
-    <div class='col col-4 mb2'>
-      <label>
-        Total Studio Income
-        {{input value=studio.income key-up=(route-action 'setNumeric' 'income')}}
-      </label>
+    <div class='brick dont-pad col col-12 sm-col-4 py1 center'>
+      <div class='inner p2 border-medium-gray'>
+        <h1 class='serif lighter'>1.</h1>
+        <h3 class='serif lighter'>Profit Share Units (PSU)</h3>
+        <p class='line-height'>
+          Teams are more efficient when they work together longer. Therefore, Profit Share
+          Units are a bit like vested stocks. A team member earns one per month, (capped after
+          four years at 48) and they correspond to a profit share at the end of the year.
+        </p>
+      </div>
     </div>
-    <div class='col col-4 mb2'>
-      <label>
-        Total Non-Salary Expenses
-        {{input value=studio.expenses key-up=(route-action 'setNumeric' 'expenses')}}
-      </label>
+    <div class='brick dont-pad col col-12 sm-col-4 py1 center px2'>
+      <div class='inner p2 border-medium-gray'>
+        <h1 class='serif lighter'>2.</h1>
+        <h3 class='serif lighter'>Salary Cap @ 90k USD</h3>
+        <p class='line-height'>
+          All salaries at Sanctuary Computer are capped to 90k USD. A team member's
+          ability to earn a full salary depends on how close they are to seniority,
+          in addition to a few other non-technical points.
+        </p>
+      </div>
     </div>
-    <div class='col col-4 mb2'>
-      <label>
-        Total Salary Costing (determined below)
-        {{input value=studio.laborCost disabled=true}}
-      </label>
+    <div class='brick col col-12 sm-col-4 py1 center'>
+      <div class='inner p2 border-medium-gray'>
+        <h1 class='serif lighter'>3.</h1>
+        <h3 class='serif lighter'>Paid in Decemeber</h3>
+        <p class='line-height'>
+          Sanctuary does the profit share calculations in November, to be paid out in
+          December. This helps the studio dramatically lower any tax hit, and makes sure
+          everyone's profit share hits early in January.
+        </p>
+      </div>
     </div>
   </div>
 
   <!-- Scenario Runs -->
-  <div class='clearfix mb3'>
+  <div class='clearfix mb3 px2'>
     <h2>Scenarios</h2>
     <hr />
-    <p>
-      Run a sample scenario below to see how the profit share pans out. These only effect "Total Studio Income".
+    <p class='line-height'>
+      Run a sample scenario below to see how the profit share pans out. These only effect the studio's income.
     </p>
     {{#each studio.scenarios as |scenario|}}
-      <div class='col col-6 p1 center'>
-        <div class='scenario inner p2 border-medium-gray bg-light-gray {{if (eq scenario studio.selectedScenario) "active"}}' {{action (route-action 'applyScenario' scenario)}}>
+      <div class='brick col col-12 sm-col-6 py1 center {{if (eq scenario studio.selectedScenario) "active"}}'>
+        <div class='inner p2 border-medium-gray' {{action (route-action 'applyScenario' scenario)}}>
           <h3 class='serif lighter'>{{scenario.title}}</h3>
           <p>{{scenario.description}}</p>
         </div>
@@ -52,119 +102,153 @@
   </div>
 
   <!-- Team Table -->
-  <div class='clearfix mb3'>
+  <div class='clearfix mb3 px2'>
     <h2>Sanctuary Team</h2>
     <hr />
-    <p>
+    <p class='line-height'>
       The below is an example team of technologists to run the calculations against.
     </p>
+    <div class='col col-12 sm-show'>
+      <div class='inner clearfix'>
+        <h5 class='dark-navy'>(Btw, you can edit the team on a larger screen)</h5>
+      </div>
+    </div>
     {{#each studio.technologists as |technologist|}}
-      <div class='col col-12 p1'>
-        <div class='bg-light-gray inner py1 px2 clearfix flex'>
+      <div class='technologist col col-12'>
+        <div class='inner py1 clearfix flex'>
           <div class='col col-2 flex items-center'>
             {{#if (eq editing technologist)}}
-              {{input value=technologist.name class='inline'}}
+              {{input value=technologist.name class='inline py1'}}
             {{else}}
               <h3>{{technologist.name}}</h3>
             {{/if}}
           </div>
-          <div class='col col-4 center'>
-            <h5>{{technologist.monthsAtSanctu}} Months / PSU</h5>
+          <div class='months col col-4 center flex items-center'>
+            {{#if (eq editing technologist)}}
+              <input
+                value={{technologist.monthsAtSanctu}}
+                type='number'
+                class='inline py1 mx-auto'
+                oninput={{action (route-action 'editTeamMemberNumeric' technologist 'monthsAtSanctu')}}
+              >
+            {{else}}
+              <h3>{{technologist.monthsAtSanctu}} Months / PSU</h3>
+            {{/if}}
           </div>
-          <div class='col col-4 center'>
-            <h5>{{format-money technologist.salary}}</h5>
+          <div class='salary col col-3 sm-col-4 center flex items-center'>
+            {{#if (eq editing technologist)}}
+              <input
+                value={{technologist.salary}}
+                type='number'
+                class='inline py1 mx-auto'
+                oninput={{action (route-action 'editTeamMemberNumeric' technologist 'salary')}}
+              >
+            {{else}}
+              <h3>{{format-money technologist.salary}}</h3>
+            {{/if}}
           </div>
-          <div class='col col-1 caps right-align'>
+          <div class='profit col col-3 sm-col-4 flex items-center'>
+            <h3 class='dark-navy'>{{format-money technologist.profitShare}}</h3>
+          </div>
+
+          <div class='col col-1 caps center xs-hide'>
             {{#if (eq editing technologist)}}
               <h6 {{action (route-action 'stopEditingTeamMember')}}>OK</h6>
             {{else}}
               <h6 {{action (route-action 'editTeamMember' technologist)}}>Edit</h6>
             {{/if}}
           </div>
-          <div class='col col-1 caps right-align'>
+          <div class='col col-1 caps right-align xs-hide'>
             <h6 {{action (route-action 'removeTeamMember' technologist)}}>Remove</h6>
           </div>
         </div>
       </div>
     {{/each}}
-    <div class='col col-12 center p1' {{action (route-action 'addTeamMember')}}>
-      <div class='bg-light-gray border-medium-gray inner py1 px3 clearfix center'>
-        <h3>+ Add Team Member</h3>
+    <div class='col col-12 center py1 xs-hide' {{action (route-action 'addTeamMember')}}>
+      <div class='border-medium-gray inner py1 px3 clearfix center'>
+        <h3 class='white'>+ Add Team Member</h3>
       </div>
     </div>
   </div>
 
   <!-- Metrics -->
-  <div class='clearfix mb3'>
-    <h2 class='pl1'>Calculated Metrics</h2>
+  <div class='clearfix mb3 px2'>
+    <h2>Calculated Metrics</h2>
     <hr />
-    <p class='pl1'>
+    <p class='line-height'>
       The below metrics are key in calculating how profit is divided.
     </p>
 
-    <div class='col col-6 p1 center'>
-      <div class='bg-light-gray border-medium-gray inner p2'>
-        <h3>Raw Efficiency</h3>
-        <p>This is a simple metric based on income vs expenses</p>
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Raw Efficiency</h3>
+        <p>A simple metric based on income vs expenses</p>
         <h4>{{studio.rawEfficiency}}</h4>
       </div>
     </div>
 
-    <div class='col col-6 p1 center'>
-      <div class='bg-light-gray border-medium-gray inner p2'>
-        <h3>Normalized Efficiency</h3>
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Normalized Efficiency</h3>
         <p>This metric is normalized to be more insightful</p>
         <h4>{{studio.efficiency}}</h4>
       </div>
     </div>
 
-    <div class='col col-6 p1 center'>
-      <div class='bg-light-gray border-medium-gray inner p2'>
-        <h3>Payroll Buffer</h3>
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Payroll Buffer</h3>
         <p>Needed to safely make payroll for {{studio.desiredPayrollBufferMonths}} months</p>
         <h4>{{format-money studio.allowances.buffer}}</h4>
       </div>
     </div>
 
-    <div class='col col-6 p1 center'>
-      <div class='bg-light-gray border-medium-gray inner p2'>
-        <h3>Internals Budget</h3>
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Internals Budget</h3>
         <p>An allowance for upgrading the studio, etc</p>
         <h4>{{format-money studio.allowances.upgradeBudget}}</h4>
       </div>
     </div>
 
-    <div class='col col-6 p1 center'>
-      <div class='bg-light-gray border-medium-gray inner p2'>
-        <h3>Total PSU Issued</h3>
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Total PSU Issued</h3>
         <p>The total PSU issed across the team</p>
         <h4>{{studio.totalPSUIssued}}</h4>
       </div>
     </div>
 
-    <div class='col col-6 p1 center'>
-      <div class='bg-light-gray border-medium-gray inner p2'>
-        <h3>Value per PSU</h3>
-        <p>How much profit each PSU is worth</p>
-        <h4>{{studio.actualValuePerPSU}}</h4>
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Value per PSU</h3>
+        <p>How much profit each PSU is worth this year</p>
+        <h4>{{format-money studio.actualValuePerPSU}}</h4>
       </div>
     </div>
 
-    <div class='col col-6 p1 center'>
-      <div class='bg-light-gray border-medium-gray inner p2'>
-        <h3>Total Profit Share Pool</h3>
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Total Profit Share Pool</h3>
         <p>The money put aside for for profit sharing</p>
         <h4>{{format-money studio.allowances.pool}}</h4>
       </div>
     </div>
 
-    <div class='col col-6 p1 center'>
-      <div class='bg-light-gray border-medium-gray inner p2'>
-        <h3>Reinvestment Fund</h3>
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Reinvestment Fund</h3>
         <p>Money remaining to do super weird things</p>
         <h4>{{format-money studio.allowances.investment}}</h4>
       </div>
     </div>
 
   </div>
+  <div class='clearfix px2'>
+    <div class='col col-12'>
+      <img class='fit full' src='https://media.giphy.com/media/rBgYkVznFnkek/giphy.gif' />
+    </div>
+  </div>
 </div>
+
+{{mobile-metrics studio=studio setNumeric=(route-action 'setNumeric')}}

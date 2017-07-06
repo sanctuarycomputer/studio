@@ -1,3 +1,12 @@
+.serif {
+  font-family: "Austin News Deck", serif;
+  &.lighter { font-weight: lighter; }
+}
+
+.caps {
+  letter-spacing: 0.1em !important;
+}
+
 @font-face {
 	font-family: 'Austin News Deck';
 	src: url('AustinNewsDeck-Light-Web.eot');

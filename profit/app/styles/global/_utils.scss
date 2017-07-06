@@ -1,0 +1,10 @@
+.sm-show{
+  display: inherit;
+  @media (min-width: 40em) {
+    display: none !important;
+  }
+}
+
+.full {
+  width: 100%;
+}

@@ -11,12 +11,13 @@ export default Route.extend({
     applyScenario() {
       get(this, 'studio').applyScenario(...arguments);
     },
-    setNumeric(label, input) {
-      get(this, 'studio').set(label, parseInt(input || 0));
+    setNumeric(label, event) {
+      const { value } = event.target;
+      get(this, 'studio').set(label, parseFloat(value || 0));
       get(this, 'studio').set('selectedScenario', null);
     },
     addTeamMember() {
-      let newTech = get(this, 'studio').makeTechnologist({ name: faker.name.firstName(), monthsAtSanctu: 2, salary: 50000 });
+      let newTech = get(this, 'studio').makeTechnologist({ name: faker.name.firstName(), monthsAtSanctu: 0, salary: 50000 });
       set(this, 'controller.editing', newTech);
     },
     removeTeamMember() {
@@ -27,6 +28,10 @@ export default Route.extend({
     },
     stopEditingTeamMember() {
       set(this, 'controller.editing', null);
+    },
+    editTeamMemberNumeric(tech, label, event) {
+      const { value } = event.target;
+      tech.set(label, parseFloat(value || 0));
     }
   }
 });

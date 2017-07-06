@@ -1,0 +1,19 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, input {
+  color: var(--dark-gray);
+  font-family: "Atlas Grotesk", sans-serif;
+  &.lighter { font-weight: lighter; }
+}
+
+h1 { font-size: 3em; }
+a { color: var(--dark-navy); }
+p { &.line-height { line-height: 1.75em; } }
+
+hr {
+  border-bottom: 0;
+  border-style: solid;
+  border-color: var(--medium-gray);
+}

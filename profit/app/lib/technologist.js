@@ -8,12 +8,8 @@ export default Ember.Object.extend({
     return get(this, 'monthsAtSanctu');
   }),
 
-  profitShare: computed('studio.allowances.pool', 'studio.efficiency', 'studio.totalPSUIssued', 'psu', function() {
-    return (
-      get(this, 'studio.allowances.pool') *
-      get(this, 'studio.efficiency') *
-      (get(this, 'psu') / get(this, 'studio.totalPSUIssued'))
-    );
+  profitShare: computed('psu', 'studio.actualValuePerPSU', function() {
+    return get(this, 'psu') * get(this, 'studio.actualValuePerPSU');
   })
 });
 

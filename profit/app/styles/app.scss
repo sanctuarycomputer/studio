@@ -14,20 +14,55 @@
   color: white;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
-}
-
 [data-ember-action] {
   cursor: pointer;
   transition: 120ms ease-in-out;
-  &:hover:not(.active) { opacity: 0.4; }
+  &:hover { opacity: 0.4; }
 }
 
-.scenario.active {
-  background-color: var(--dark-navy);
-  h3, p { color: white; }
+.brick {
+  &:not(.dont-pad) {
+    &:nth-child(even) {
+      @media (min-width: 40em) {
+        padding-right: 0.5rem;
+      }
+    }
+    &:nth-child(odd) {
+      @media (min-width: 40em) {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+  &.active {
+    .inner {
+      background-color: var(--dark-navy);
+      border-color: var(--dark-navy);
+      h3, p { color: white; }
+    }
+  }
 }
+
+.technologist {
+  h3 {
+    font-size: 0.85em;
+    @media (min-width: 40em) {
+      font-size: 1.1em;
+    }
+  }
+  .months h3, .salary h3 {
+    margin: auto;
+    @media (min-width: 40em) {
+      margin: 0;
+    }
+  }
+  .profit h3 {
+    margin-left: auto;
+    @media (min-width: 40em) {
+      margin-left: 0;
+    }
+  }
+}
+
 
 // Used for Inline Editing in the Technologists Table
 input.inline {
@@ -43,56 +78,16 @@ input.inline {
   border-left: 0;
   border-right: 0;
   border-bottom-width: 1px;
-  border-bottom-color: var(--dark-gray);
+  border-bottom-color: var(--dark-navy);
+  width: 100%;
+  color: var(--dark-navy);
 }
 
-h1, h2, h3, h4, h5, h6, p, label, input {
-  color: var(--dark-gray);
-  font-family: "Atlas Grotesk", sans-serif;
-  &.lighter { font-weight: lighter; }
-}
-
-h1 {
-  font-size: 3em;
-}
-
-.serif {
-  font-family: "Austin News Deck", serif;
-  &.lighter { font-weight: lighter; }
-}
-
-label {
-  font-size: 1em;
-  input {
-    outline: none;
-    display: block;
-    font-size: 2em;
-    border: none;
-    &[disabled] {
-      color: var(--medium-gray);
-    }
-  }
-}
-
-.bg-light-gray {
-  background-color: var(--light-gray);
-}
-
-.border-medium-gray {
-  border: 1px solid var(--medium-gray);
-}
-
-.caps {
-  letter-spacing: 0.1em !important;
-}
+@import 'global/fonts';
+@import 'global/colors';
+@import 'global/elements';
+@import 'global/utils';
 
 @import 'components/nav-bar';
-@import 'global/fonts';
-
-hr {
-  border-bottom: 0;
-  border-style: solid;
-  border-color: var(--medium-gray);
-}
-
+@import 'components/mobile-metrics';
 

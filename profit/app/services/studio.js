@@ -42,7 +42,7 @@ export default Service.extend({
   },
 
   applyScenario(scenario) {
-    set(this, 'income', scenario.profitIncurred(this));
+    set(this, 'income', parseFloat(scenario.profitIncurred(this).toFixed(2)));
     set(this, 'selectedScenario', scenario);
   },
 

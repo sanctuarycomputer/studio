@@ -1,8 +1,7 @@
 import Ember from 'ember';
-const { Component, set } = Ember;
 
-export default Component.extend({
-  classNames: ['nav-bar', 'flex', 'fixed'],
+export default Ember.Component.extend({
+  classNames: ['mobile-metrics', 'sm-show', 'flex'],
   actions: {
     setNumeric(label, value) {
       this.attrs.setNumeric(label, value)
