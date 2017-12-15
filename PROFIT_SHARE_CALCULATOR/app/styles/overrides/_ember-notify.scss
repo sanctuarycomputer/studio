@@ -1,0 +1,14 @@
+.ember-notify-default .ember-notify {
+  font-family: "Atlas Grotesk", sans-serif;
+  color: white;
+  border: 0;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 18px;
+
+  &.success { background-color: var(--dark-navy) }
+  &.info { background-color: var(--dark-navy) }
+  &.warning { background-color: var(--dark-navy) }
+  &.error { background-color: var(--dark-navy) }
+}
+

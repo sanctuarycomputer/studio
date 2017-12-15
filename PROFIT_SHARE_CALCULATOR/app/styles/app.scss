@@ -1,0 +1,138 @@
+:root {
+  --light-gray: #F4F4F4;
+  --medium-gray: #C8C8C8;
+  --dark-gray: #3B3B3B;
+  --dark-navy: #173963;
+}
+
+::selection {
+  background: var(--dark-navy); /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: var(--dark-navy); /* Gecko Browsers */
+  color: white;
+}
+
+[data-ember-action] {
+  cursor: pointer;
+  transition: 120ms ease-in-out;
+  &:hover { opacity: 0.4; }
+}
+
+.brick {
+  &:not(.dont-pad) {
+    &:nth-child(even) {
+      @media (min-width: 40em) {
+        padding-right: 0.5rem;
+      }
+    }
+    &:nth-child(odd) {
+      @media (min-width: 40em) {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+  &.active {
+    .inner {
+      background-color: var(--dark-navy);
+      border-color: var(--dark-navy);
+      h3, p { color: white; }
+    }
+  }
+}
+
+.technologist {
+  h3 {
+    font-size: 0.85em;
+    @media (min-width: 40em) {
+      font-size: 1.1em;
+    }
+  }
+  .months h3, .salary h3 {
+    margin: auto;
+    @media (min-width: 40em) {
+      margin: 0;
+    }
+  }
+  .profit h3 {
+    margin-left: auto;
+    @media (min-width: 40em) {
+      margin-left: 0;
+    }
+  }
+}
+
+
+// Used for Inline Editing in the Technologists Table
+input.inline {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  color: var(--dark-gray);
+  font-family: "Atlas Grotesk", sans-serif;
+  outline: none;
+  background-color: transparent;
+  border-style: solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--dark-navy);
+  width: 100%;
+  color: var(--dark-navy);
+}
+
+
+label.metric-input {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  &.left-aligned {
+    text-align: left;
+    input {
+      text-align: left;
+    }
+  }
+
+  input {
+    text-align: right;
+    width: 140px;
+    outline: none;
+    display: block;
+    font-size: 2.5em;
+    border: none;
+    &[disabled] {
+      color: var(--medium-gray);
+    }
+  }
+}
+
+.metrics-bar-trigger {
+  cursor: pointer;
+  font-family: "Atlas Grotesk", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  position: fixed;
+  z-index: 3;
+  top: 110px;
+  left: 32px;
+  background-color: var(--dark-navy);
+  color: white;
+  padding: 10px;
+}
+
+@import 'global/fonts';
+@import 'global/colors';
+@import 'global/elements';
+@import 'global/utils';
+
+@import 'components/nav-bar';
+@import 'components/metrics-drawer';
+
+@import 'overrides/ember-notify';
