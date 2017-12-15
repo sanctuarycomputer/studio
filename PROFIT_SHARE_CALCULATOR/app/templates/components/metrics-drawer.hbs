@@ -1,0 +1,67 @@
+<h2>Performance Metrics</h2>
+<hr class='mb2' />
+
+<label class='metric-input left-aligned block pb2'>
+  Efficiency Cap
+  <input
+    value={{studio.efficiencyCap}}
+    oninput={{action 'setNumeric' 'efficiencyCap'}}
+  >
+</label>
+
+<label class='metric-input left-aligned block pb2'>
+  Incoming
+  <input
+    value={{studio.income}}
+    oninput={{action 'setNumeric' 'income'}}
+  >
+</label>
+
+<label class='metric-input left-aligned block pb2'>
+  Expenses
+  <input
+    value={{studio.expenses}}
+    oninput={{action 'setNumeric' 'expenses'}}
+  >
+</label>
+
+<label class='metric-input left-aligned block pb2'>
+  Desired Payroll Buffer Months
+  <input
+    value={{studio.desiredPayrollBufferMonths}}
+    oninput={{action 'setNumeric' 'desiredPayrollBufferMonths'}}
+  >
+</label>
+
+{{#if (eq studio.mode studio.Modes.MOCK)}}
+  <label class='metric-input left-aligned block pb2'>
+    Labor Cost (Computed)
+    {{input value=studio.laborCost disabled=true}}
+  </label>
+  <label class='metric-input left-aligned block pb2'>
+    Total PSU Issued (Computed)
+    {{input value=studio.totalPSUIssued disabled=true}}
+  </label>
+{{else}}
+  <label class='metric-input left-aligned block pb2'>
+    Actualized Labor Cost
+    <input
+      value={{studio.actualLaborCost}}
+      oninput={{action 'setNumeric' 'actualLaborCost'}}
+    >
+  </label>
+  <label class='metric-input left-aligned block pb2'>
+    Projected Labor Cost
+    <input
+      value={{studio.projectedLaborCost}}
+      oninput={{action 'setNumeric' 'projectedLaborCost'}}
+    >
+  </label>
+  <label class='metric-input left-aligned block pb2'>
+    Total PSU Issued
+    <input
+      value={{studio.actualTotalPSUIssued}}
+      oninput={{action 'setNumeric' 'actualTotalPSUIssued'}}
+    >
+  </label>
+{{/if}}
