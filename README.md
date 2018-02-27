@@ -18,28 +18,29 @@ if you'd like to ask any questions, please reach out to **hugh@sanctuary.compute
 
 ### Studio
 
-- [The Dogma of Sanctuary Computer](https://github.com/sanctuarycomputer/studio/blob/master/DOGMA.md)
-- [Profit & Loss Statements](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_AND_LOSS)
-- [Sanctu Compu Profit Share Calculator](http://profit.sanctuary.computer/)
+- 🐕[The Dogma of Sanctuary Computer](https://github.com/sanctuarycomputer/studio/blob/master/DOGMA.md)
+- 💸[Profit & Loss Statements](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_AND_LOSS)
+- 🙌[Profit Share Calculator](http://profit.sanctuary.computer/)
+- 🥑[food.sanctuary.computer](https://food.sanctuary.computer)
 
 ### Products
 
-- [The Baking Supply Co](https://bakingsupply.co/)
-- [Give One](https://give-ong.org/)
-- [Echowings](https://www.echowings.org/)
+- 🌿[The Baking Supply Co](https://bakingsupply.co/)
+- 🙏[Give One](https://give-ong.org/)
+- 🐘[Echowings](https://www.echowings.org/)
 
 ### Open Source
 
-- [WIP - Our Profit Share Calculator](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_SHARE_CALCULATOR)
-- [Medium RSS to JSON](https://github.com/sanctuarycomputer/medium-rss-to-json)
-- [C++ MtpLite](https://github.com/sanctuarycomputer/MtpLite)
-- [Node MtpLite](https://github.com/sanctuarycomputer/node-mtplite)
-- [Echowings](https://github.com/sanctuarycomputer/echowings)
-- [DEPRECATED - Mailchimp Single Opt In](https://github.com/sanctuarycomputer/mailchimp-single-opt-in)
+- 👩‍💻[WIP - Profit Share Calculator](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_SHARE_CALCULATOR)
+- 🖋[Medium RSS2JSON Microservice](https://github.com/sanctuarycomputer/medium-rss-to-json)
+- 📟[C++ MtpLite](https://github.com/sanctuarycomputer/MtpLite)
+- ⌚️[Node MtpLite](https://github.com/sanctuarycomputer/node-mtplite)
+- 🐎[Echowings OSS](https://github.com/sanctuarycomputer/echowings)
+- 🙊[DEPRECATED - Mailchimp Single Opt In Microservice](https://github.com/sanctuarycomputer/mailchimp-single-opt-in)
 
 ### Connect
 
-- [Instagram](https://www.instagram.com/sanctucompu/)
-- [Twitter](https://twitter.com/sanctucompu)
-- [Medium](https://medium.com/sanctuary-computer-inc)
-- [Facebook](https://www.facebook.com/sanctucompu/)
+- 📷[Instagram](https://www.instagram.com/sanctucompu/)
+- 🐥[Twitter](https://twitter.com/sanctucompu)
+- ✏️[Medium](https://medium.com/sanctuary-computer-inc)
+- 🔌[Facebook](https://www.facebook.com/sanctucompu/)
