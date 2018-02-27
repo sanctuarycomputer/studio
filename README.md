@@ -26,7 +26,7 @@ if you'd like to ask any questions, please reach out to **hugh@sanctuary.compute
 ### Products
 
 - 🌿[The Baking Supply Co](https://bakingsupply.co/)
-- 🙏[Give One](https://give-ong.org/)
+- 🙏[Give One](https://give-one.org/)
 - 🐘[Echowings](https://www.echowings.org/)
 
 ### Open Source
