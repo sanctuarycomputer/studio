@@ -31,6 +31,8 @@ if you'd like to ask any questions, please reach out to **hugh@sanctuary.compute
 
 ### Open Source
 
+- 🌮[Brandibble.js](https://github.com/sanctuarycomputer/brandibble.js)
+- 🍔[Brandibble Redux](https://github.com/sanctuarycomputer/brandibble-redux)
 - 👩‍💻[WIP - Profit Share Calculator](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_SHARE_CALCULATOR)
 - 🖋[Medium RSS2JSON Microservice](https://github.com/sanctuarycomputer/medium-rss-to-json)
 - 📟[C++ MtpLite](https://github.com/sanctuarycomputer/MtpLite)
