@@ -5,7 +5,7 @@ category: Who we are
 
 # Dogma 
 
-The dogma of sanctucompu
+The [dogma](https://en.wikipedia.org/wiki/Dogma_(film)) of sanctucompu
 
 ![dogma](http://i.giphy.com/hyjJ2rylpztrG.gif)
 
@@ -42,7 +42,6 @@ At the time of writing, Sanctuary's longer term goals are as follows (and not li
 - Release in-house products, apps and services through internal investment.
 - Build a ventures arm for investing in third party businesses through "in-kind" technical & financial contributions.
 - To buy a property out of the city to act as an offsite Sanctuary location.
-- Build a video game & virtual reality development arm to the company.
 - Start experimenting in non-software engineering industries, such as affordable housing & green technology.
 - Give back to our community through charity & in-kind involvement.
 
