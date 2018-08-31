@@ -52,6 +52,10 @@ At Sanctuary, struggling through an issue on your own does not make you cool. It
 Asking for help at Sanctuary is considered a wise and proactive thing to do, provided you've tried to work it out yourself first. Programming is hard work, so don't go it alone.
 [/note]
 
+## Pair Programming
+
+Pair programming is strongly encouraged. Learning by doing is powerful, and in a pairing situation often means it happens quickly! If you ever feel like you need a hand establishing a pattern or "helping something click", ask someone to pair! They'll be so excited to help!  
+
 ## Developers in the firing line
 
 We believe the best products and relationships are built when the creative works directly with the client (rather than through a project/account manager).

@@ -1,16 +1,21 @@
-# The Dogma of Sanctu Compu
+---
+permalink: dogma 
+category: Who we are
+---
+
+# Dogma 
+
+The dogma of sanctucompu
 
 ![dogma](http://i.giphy.com/hyjJ2rylpztrG.gif)
 
-The goal of this document is to codify the underlying principles that ultimately determine what life is like at [Sanctuary Computer](http://sanctuary.computer) (named for our founding goal of building a "Sanctuary" for creative technologists).
+## High Level
 
-Often businesses like ours begin life with the best of intentions, but as time goes on, these initial goals often slip by the wayside as money, stress, clients & deadlines take to the foreground.
+Often studios like ours begin life with the best of intentions, but as time goes on, these initial goals often slip by the wayside as money, stress, clients & deadlines take to the foreground.
 
 This document serves to reinforce these values, and give our community a sense of how our culture works.
 
-***(This document is open source in [Github](github.com/sanctuarycomputer/studio) and intended to be improved over time).***
-
-# Inspirations & Reactions
+## Inspirations & Reactions
 
 First and foremost, Sanctuary Computer offers technical work to commercial clients (Brands, Startups & City Entities).
 
@@ -30,30 +35,38 @@ While this is not a new idea, we believe our underlying methodology is.
 
 - As a reaction to the frustration for creatives of "not having enough time for side projects", the Sanctuary Computer team spends Friday afternoons working on personal ideas & open source. As the business stabilizes, Sanctuary intends for the entirety of Fridays to be spent on such projects.
 
-- As a reaction to "being told when to wake up", Sanctuary has a flexible starting window of 10am to 11am. Ultimately, the overriding fact is that if a team member is putting in a solid work day & not impeding others, start time is up to the individual.
-
-# Ideas & Vision
-
-**Sanctuary Computer strives to be more and more innovative and genre pushing everyday.**
-
-![dogma](http://i.giphy.com/vIDSJ20vqFHsk.gif)
+- As a reaction to "being told when to wake up", Sanctuary has a flexible starting window of 9am to 11am. Ultimately, the overriding fact is that if a team member is putting in a solid work day & not impeding others, start time is up to the individual.
 
 At the time of writing, Sanctuary's longer term goals are as follows (and not limited to):
 
-- Roll out a generous profit sharing scheme with the entire full time team.
 - Release in-house products, apps and services through internal investment.
 - Build a ventures arm for investing in third party businesses through "in-kind" technical & financial contributions.
-- Grow & foster a forward-thinking, tech savvy content production offering.
 - To buy a property out of the city to act as an offsite Sanctuary location.
 - Build a video game & virtual reality development arm to the company.
 - Start experimenting in non-software engineering industries, such as affordable housing & green technology.
 - Give back to our community through charity & in-kind involvement.
 
-# Transparency & Generosity
+## Candor & Diversity of Ideas
+
+![dogma](http://i.giphy.com/XUwa7I4j1YXy8.gif)
+
+Taken directly from the [Rails Doctrine](https://rubyonrails.org/doctrine/):
+
+```
+With so many controversial ideas to its credit, Rails could quickly become an insular group of ideological hermits, if we required everyone to exhibit complete deference to all tenets, all the time. So we don’t!
+```
+
+```
+We need disagreement. We need dialects. We need diversity of thought and people. It’s in this melting pot of ideas we’ll get the best commons for all to share. Lots of people chipping in their two cents, in code or considered argument.
+```
+
+We are proud of sharing ideas and suggestions openly, particularly when they are uncomfortable, and when hearing new suggestions from others, *choose to receive the idea with an open mind everytime*. Diversity of ideas, thoughts and people is a sign of a healthy studio, and any behavior that discourages the like **will not be tolerated**.
+
+## Transparency & Generosity
 
 **Transparency & outward generosity comes back 10X.**
 
-![dogma](http://i.giphy.com/XUwa7I4j1YXy8.gif)
+![dogma](http://i.giphy.com/vIDSJ20vqFHsk.gif)
 
 Sanctuary profit & loss statements and financial information is available to everyone who's interested. We opt to share client relationships with other client-facing shops, and value those partnerships first.
 
@@ -61,7 +74,7 @@ Team members & collaborators are treated generously, as that care most often ret
 
 Clients see detailed breakdowns of every cost associated with their pricing, and quotations are considered collaborative.
 
-# Work Life Balance & Mental Clarity
+## Work Life Balance & Mental Clarity
 
 **Sanctuary Computer does not glorify working long hours.**
 
@@ -75,7 +88,7 @@ We don't do emails or Slack outside of work hours, and we don't work when we're 
 
 **When projects ship on time with few-to-no bugs, everyone at Sanctuary Computer enjoys a great work life balance.**
 
-# `Code Culture`
+## `Code Culture`
 
 **Sanctuary Computer's `Code Culture` is egoless.**
 
@@ -83,7 +96,7 @@ We don't do emails or Slack outside of work hours, and we don't work when we're 
 
 The underlying technologist mindset is one of openness & understanding. Both the quality of the resulting product, and efficiency of the project cycle are paramount.
 
-#### Mindshare & Communication
+### Mindshare & Communication
 
 Shared convention, code style & communication are considered the sharpest tools at our disposal.
 
@@ -91,7 +104,7 @@ For this reason, all code is reviewed and agreed upon by all other coders on the
 
 **Pair programming & whiteboarding is highly encouraged.**
 
-#### Efficiency & Shiny New Tech
+### Efficiency & Shiny New Tech
 
 For Sanctuary to grow in both innovation & competition, we strive to achieve a balance between the efficiency of "using tools we know well" & "not falling behind the cutting edge".
 
@@ -99,7 +112,7 @@ For this reason, we have a ~15% new-tech budget per project. Should we introduce
 
 When proposed, a 14% new tech solution is favoured over a 16%.
 
-#### Carpenters & Scholars
+### Carpenters & Scholars
 
  In the tech world, it's possible to achieve similar results with vastly different tools & methodologies. For this reason, technologists at Sanctuary Computer value the "consumer-perceived quality" of the resultant work product above all qualitative metrics.
 
@@ -110,7 +123,7 @@ When deciding on tech stacks, methodologies & infrastructure, the underlying too
 - Ease of maintenance (onboarding others post-launch, post-launch dev speed, framework updates)
 - Ease of understanding (accounting for all technologist experience levels)
 
-#### Verbosity & Cleverness
+### Verbosity & Cleverness
 
 Simple, easy to read code is always better than clever one-liners (except where performance is a real concern). We have a soft spot for verbose variable names and `longFunctionNamesThatDoOnlyWhatTheyAreCalled`.
 
@@ -118,7 +131,7 @@ We strive to create code that naturally reads with meaning.
 
 `// Oh, and comment anything that's confusing!`
 
-# Hospitality before Technicality
+## Hospitality before Technicality
 
 **Sanctuary Computer is run more like a restaurant than a traditional tech shop.**
 
@@ -130,10 +143,14 @@ Our client language is one of empathy, never assuming understanding, and using l
 
 Client quotations are detailed, fair and transparent. There are no "magic numbers" or made up prices. Quotation phases are considered a collaborative process with the client.
 
-# Help us improve document.
+## Recommended Reading
 
-**We accept Pull Requests!**
-
-![dogma](http://i.giphy.com/2v8O3tFkc88tq.gif)
+- [Rework by Jason Fried & DHH](https://www.amazon.com/Rework-Jason-Fried/dp/0307463745)
+- [Let My People Go Surfing by Yvon Chouinard](https://www.amazon.com/Let-People-Surfing-Education-Businessman-Including/dp/0143109677/)
+- [Creativity Inc by Ed Catmull](https://www.penguinrandomhouse.com/books/216369/creativity-inc-by-ed-catmull-with-amy-wallace/)
+- [Setting the Table by Danny Meyer](https://www.amazon.com/Setting-Table-Transforming-Hospitality-Business/dp/0060742763)
+- [Intercom on Starting Up](https://www.intercom.com/books/starting-up)
+- [The Rails Doctrine](https://rubyonrails.org/doctrine/)
+- [Wabi-Sabi for Artists, Designers, Poets & Philosophers by Leonard Koren](https://www.amazon.com/Wabi-Sabi-Artists-Designers-Poets-Philosophers/dp/0981484603)
 
 

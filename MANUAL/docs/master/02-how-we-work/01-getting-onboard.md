@@ -13,8 +13,9 @@ Get setup with our tools & systems, and you'll be flying.
 
 We'd recommend you bring / install the following tools:
 
+- A water bottle
 - Your own Mac laptop
-- A text editor (everyone's liking [VSCode](https://code.visualstudio.com/))
+- A text editor setup for soft tabs (2x spaces when you hit `Tab`)
 - Google Chrome
 - [Zenhub's Chrome Extension](https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd?hl=en-US)
 - A terminal (we recommend [iTerm2](https://www.iterm2.com/))
@@ -32,8 +33,10 @@ While you're at it, you'll want to install the following packages via Homebrew:
 
 To get up and running on the admin side, you'll need the following:
 
+- An understanding of [Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 - A signed Employment Contract (or Contractor Agreement and IP Assignment contract for freelancers)
 - A `@sanctuary.computer` email address
+- A Harvest / Forecast account
 - Access to our [Github Organization](https://github.com/sanctuarycomputer)
 - A [Zenhub](https://www.zenhub.com) License
 - A [Sketch](https://www.sketchapp.com) License (if you don't have one!)

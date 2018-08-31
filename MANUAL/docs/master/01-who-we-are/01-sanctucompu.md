@@ -13,9 +13,7 @@ We're a different type of technology shop, and this is why.
 
 Sanctuary Computer is an artful user interface studio on the Bowery in New York City. We partner with some of NYC’s best design shops and startups, employ modern technologies, share profit, learn together, and push each other to be better.
 
-Sanctu started in February, 2015, as a type of Visa hack. You see - it's possible to apply for a Visa through a company that you happen to have ownership interest in, and as an Australian person hoping to work with a variety of US companies, that was my only route (these days I'm a greencard holder).
-
-It wasn't until January 2016 that Sebastian joined Sanctuary - we moved into [New Inc](http://www.newinc.org/) (the New Museum's Incubator space) alongside our buddies, [Playlab](http://www.playlab.org/), and started working with [Dame Products](https://www.dameproducts.com/) & [Dig Inn](https://itunes.apple.com/us/app/dig-inn/id900117346?mt=8). We grew organically from there through word of mouth, and we're happy to say that in the time we've been a company, we've never once needed to cold-pitch for work, or take investment.
+I started the company in 2015, but it wasn't until January 2016 that Sebastian joined Sanctuary - we moved into [New Inc](http://www.newinc.org/) (the New Museum's Incubator space) alongside our buddies, [Playlab](http://www.playlab.org/), and started working with [Dame Products](https://www.dameproducts.com/) & [Dig Inn](https://itunes.apple.com/us/app/dig-inn/id900117346?mt=8). We grew organically from there through word of mouth, and we're happy to say that in the time we've been a company, we've never once needed to cold-pitch for work, or take investment.
 
 ## How we're different
 
@@ -30,6 +28,10 @@ Love enters through the eyes, and our customers love our work.
 ### Clients deserve hospitality
 
 We go to great lengths to show our clients that we really, really care about their project. Our quotations are fair and transparent, our communication is fluid and careful, and we're compromising on everything except quality. We use friendly metaphors to explain the complicated, and take special care to set expectations early on.
+
+[note]
+Put simply, we care about, and optimize for the client's experience in working with us, much like we'd optimize the UX of an app or website. It's different every time, and needs special attention. In a world where agencies treat clients as "other", it's a powerful point of difference.
+[/note]
 
 ### Creatives deserve Sanctuary
 
