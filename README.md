@@ -21,6 +21,7 @@ if you'd like to ask any questions, please reach out to **hugh@sanctuary.compute
 - 🐕[The Dogma of Sanctuary Computer](https://github.com/sanctuarycomputer/studio/blob/master/DOGMA.md)
 - 💸[Profit & Loss Statements](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_AND_LOSS)
 - 🙌[Profit Share Calculator](http://profit.sanctuary.computer/)
+- 📚[Work Manual](http://manual.sanctuary.computer)
 - 🥑[food.sanctuary.computer](https://food.sanctuary.computer)
 
 ### Products

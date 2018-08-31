@@ -1,0 +1,17 @@
+{
+  "subdomain": "sanctucompu",
+  "cname": "",
+  "defaultVersion": "master",
+  "versions": {
+    "master": "docs/master"
+  },
+  "theme": "default",
+  "themeSettings": {
+    "logoUrl": "./assets/logo.svg",
+    "headerBg": "#173963",
+    "linkColor": "#173963",
+    "navbar": {
+      "Home": "http://www.sanctuary.computer"
+    }
+  }
+}
