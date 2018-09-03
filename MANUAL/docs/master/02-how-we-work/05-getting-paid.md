@@ -42,12 +42,12 @@ From a high level - we're able to justify paying an individual more money if the
 ### Precision
 We're a razor sharp technology company, and for that reason, precision is valued highly, both internally and externally. Take the time to really understand what you're doing so you can do it right straight up, and triple check everything is correct before showing anyone. This allows your team and clients to trust you more, and spend less time fixing your mistakes for you.
 
-### Teaching
-If you're a someone who's patient and willing to spend the time educating others through pull requests and pair programming, your expertise will have an amplifing effect on the value of the team. It takes a lot of effort, but it doesn't go unnoticed: it's a big deal.
-
 [note]
 Clients are paying us to do work for them, and for that reason, they hold us to a very high standard (and rightly so). Even just a couple small mistakes or typos in contracts, documents or website copy can start degrading their trust in our ability. That's not accceptable!
 [/note]
+
+### Teaching
+If you're a someone who's patient and willing to spend the time educating others through pull requests and pair programming, your expertise will have an amplifing effect on the value of the team. It takes a lot of effort, but it doesn't go unnoticed: it's a big deal.
 
 ### Autonomy
 Creatives who can achieve things on their own while needing less hand-holding or help from others are using less of the team's time. This might mean you know more programming languages, or take lessons to better learn how to use our tools; but it doesn't mean you need to be an expert, either.
