@@ -16,7 +16,7 @@ We like to say that when a client first sees their website, it should be like a 
 
 It's that magic that has them raving about how easy we were to work with.
 
-Making that happen is not magic: it's hard work. To pull this off, we must check our work at every breakpoint before pushing it up, critique every Pull Request for visual changes and CSS tweaks,, and be dilligent about creating a backlog of `TODO` list items to address before the client sees the site.
+Making that happen is not magic: it's hard work. To pull this off, we must check our work at every breakpoint before pushing it up, critique every Pull Request for visual changes and CSS tweaks, and be dilligent about creating a backlog of `TODO` list items to address before the client sees the site.
 
 [note]
 A client may first open their website on their phone, so it's important that our Mobile version has the same level of polish as desktop!

@@ -10,9 +10,9 @@ We're in this thing together. Here's some notes about how we work together!
 ![](https://shop.sanctuary.computer/assets/coveralls-on-models.gif)
 *Code is Blue Collar*
 
-## Agile Development & Git Flow
+## Agile Development and Git Flow
 
-At Sanctuary, we practice agile development via a branching & merging process called "Git Flow". It works like this:
+At Sanctuary, we practice agile development via a branching and merging process called "Git Flow". It works like this:
 
 1. Every feature should be broken into as many Zenhub cards as possible during Sprint Planning, and the week's workflow is placed in the `Todo` column of the project board (`13.5` points per developer)
 2. You'll move a card from `Todo` to `In Progress` when you start work on it (you should only have a single card in `In Progress` as a time)

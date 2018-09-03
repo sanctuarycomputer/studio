@@ -5,7 +5,7 @@ category: How we work
 
 # Getting Onboard
 
-Get setup with our tools & systems, and you'll be flying.
+Get setup with our tools and systems, and you'll be flying.
 
 ![](https://scontent-iad3-1.cdninstagram.com/vp/0ebff53d0211226048ec46290dc6a4bc/5C36D945/t51.2885-15/e35/28153149_440323716401166_7690921606788415488_n.jpg)
 

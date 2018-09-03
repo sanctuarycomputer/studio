@@ -13,7 +13,7 @@ We're a different type of technology shop, and this is why.
 
 Sanctuary Computer is an artful user interface studio on the Bowery in New York City. We partner with some of NYC’s best design shops and startups, employ modern technologies, share profit, learn together, and push each other to be better.
 
-I started the company in 2015, but it wasn't until January 2016 that Sebastian joined Sanctuary - we moved into [New Inc](http://www.newinc.org/) (the New Museum's Incubator space) alongside our buddies, [Playlab](http://www.playlab.org/), and started working with [Dame Products](https://www.dameproducts.com/) & [Dig Inn](https://itunes.apple.com/us/app/dig-inn/id900117346?mt=8). We grew organically from there through word of mouth, and we're happy to say that in the time we've been a company, we've never once needed to cold-pitch for work, or take investment.
+I started the company in 2015, but it wasn't until January 2016 that Sebastian joined Sanctuary - we moved into [New Inc](http://www.newinc.org/) (the New Museum's Incubator space) alongside our buddies, [Playlab](http://www.playlab.org/), and started working with [Dame Products](https://www.dameproducts.com/) and [Dig Inn](https://itunes.apple.com/us/app/dig-inn/id900117346?mt=8). We grew organically from there through word of mouth, and we're happy to say that in the time we've been a company, we've never once needed to cold-pitch for work, or take investment.
 
 ## How we're different
 
@@ -47,7 +47,7 @@ We welcome anyone who's willing to do their part in making everyone feel safe, a
 
 ## Where we're going
 
-As a team, we're committed to constantly changing, growing and evolving. We are allergic to "frog boiling", and welcome new ideas with energy and excitement. We plan to always keep the team small and nimble, focusing on ever-increasing our capacity and ability to produce wordclass technology experiences.
+As a team, we're committed to constantly changing, growing and evolving. We are allergic to "frog boiling", and welcome new ideas with energy and excitement. We plan to always keep the team small and nimble, focusing on ever-increasing our capacity and ability to produce world-class technology experiences.
 
 Quality over quantity, plain and simple.
 

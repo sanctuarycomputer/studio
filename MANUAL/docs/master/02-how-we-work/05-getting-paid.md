@@ -10,7 +10,6 @@ Our offering is designed to give our team more control over how much money we ma
 ![](http://swirls.sanctuary.computer/images/contact/contact-2.jpg)
 *Axe throwing in Toronto with [Playlab](http://www.playlab.org/)*
 
-
 ## Sharing Profit
 
 We all share in the company's profit, in a egalitarian and generous way.
@@ -21,13 +20,13 @@ Our profit share calculator is [here](http://profit.sanctuary.computer/), and th
 
 The longer you've been at Sanctuary, the deeper the grooves of your effect on our group dynamic and mindshare. Everyone at Sanctuary earns one (1x) profit share unit per month, capped at four years worth (or 48).
 
-We believe this is far more valuable than equity - Sanctuary Computer is just a bunch of desks & monitors in a room. What's really valuable is our ability to generate profit year over year, so that's what we distribute to our team.
+We believe this is far more valuable than equity - Sanctuary Computer is just a bunch of desks and monitors in a room. What's really valuable is our ability to generate profit year over year, so that's what we distribute to our team.
 
 Read more about our profit share [here](https://medium.com/sanctuary-computer-inc/why-and-how-we-share-profit-fba9643d5623), and test it out in our [interactive profit calculator](http://profit.sanctuary.computer/)!
 
 ## Salary Cap
 
-Secondly, we have a salary cap of `$90,000 USD`. Even the most senior developers here won't make higher that the salary cap (yes, including Hugh).
+Secondly, we have a salary cap of `$90,000 USD`. Even the most senior developers here won't make higher than the salary cap (yes, including Hugh).
 
 Your starting salary will fall somewhere below the cap, based on how experienced, autonomous and reliable you are.
 
@@ -51,14 +50,14 @@ Clients are paying us to do work for them, and for that reason, they hold us to 
 [/note]
 
 ### Autonomy
-Creatives who can achieve things on their own while needing less needing hand-holding or help from others are using less of the team's time. This might mean you know more programming lessions, or take lessons to betterlearn how to use our tools; but it doesn't mean you need to be an expert, either.
+Creatives who can achieve things on their own while needing less hand-holding or help from others are using less of the team's time. This might mean you know more programming languages, or take lessons to better learn how to use our tools; but it doesn't mean you need to be an expert, either.
 
 Autonomy can mean taking an extra 30 minutes to google something yourself before asking, or making a judgement call on a design solution without breaking someone else's focus to ask.
 
 ### Communication
-Of course, there are cases when communication is far more important that Autonomy, and in those cases, communicating well is important. If you're unable to solve a problem, and need someone's help to move forward, you should ask as soon as possible, and give that person all of the context and information that will need to help you quickly and efficiently.
+Of course, there are cases when communication is far more important that Autonomy, and in those cases, communicating well is important. If you're unable to solve a problem, and need someone's help to move forward, you should ask as soon as possible, and give that person all of the context and information they will need to help you quickly and efficiently.
 
-The same is of true of responding - good communication makes no assumptions of what the person may or may not know. Well crafted emails go a long, long way. Take the time to communicate, it means a lot to everyone.
+The same is of true of responding - good communication makes no assumptions of what the person may or may not know. Well crafted emails go a long, long way, and treat your inbox with care. Take the time to communicate, it means a lot to everyone!
 
 [note]
 Gone are the days of the nerdy developer in a cave. At Sanctuary, you're responsible to be able to craft emails to clients on your own. The better you do with communication, the better the end result.
@@ -75,7 +74,7 @@ A practical example? When you send an email that requires feedback, always set a
 [/note]
 
 ### Blogging, Email Blasts, and Social Media
-As we gain more and more notoriety, we all make more profit. Part of bringing in work (and new hires!) at a company like ours is self promotion, and by all means, it's too much work for one person to do alone. If you want to write posts for our Medium, or create content for our Instagram / Twitter, please do!
+As we gain more and more recognition and momentum, we all make more profit. Part of bringing in work (and new hires!) at a company like ours is self promotion, and by all means, it's too much work for one person to do alone. If you want to write posts for our Medium, or create content for our Instagram / Twitter, please do!
 
 ## Taking more Responsibility
 

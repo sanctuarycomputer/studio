@@ -5,7 +5,7 @@ category: How we work
 
 # The Work Week
 
-Sanctuary ebbs & flows with the tides of a weekly sprint. Here's how it works.
+Sanctuary ebbs and flows with the tides of a weekly sprint. Here's how it works.
 
 ![](https://scontent-iad3-1.cdninstagram.com/vp/e7d580737d9c318f555ed825f57e5ab0/5BFA78FC/t51.2885-15/e35/30085791_182652012381526_4517074223973269504_n.jpg)
 
@@ -41,6 +41,6 @@ After Retrospective, we like to work on some learning or side project hacking wo
 
 ## Premium Fridays
 
-In the spirit of [Yvon Chouinard's "Let My People Go Surfing"](https://www.patagonia.com/product/let-my-people-go-surfing-revised-paperback-book/BK067.html), we take the last Friday of every month off, for a paid day off - or as we like to say, we take an extra 12 long weekends every year. The extra time off makes for a happy and refreshed team, and we find it's more than work the investment.
+In the spirit of [Yvon Chouinard's "Let My People Go Surfing"](https://www.patagonia.com/product/let-my-people-go-surfing-revised-paperback-book/BK067.html), we take the last Friday of every month off, for a paid day off - or as we like to say, we take an extra 12 long weekends every year. The extra time off makes for a happy and refreshed team, and we find it's more than worth the investment.
 
 [You can read a bit more about Premium Friday here.](https://medium.com/sanctuary-computer-inc/12-extra-long-weekends-for-sanctuary-de46ed4c3f85)
