@@ -44,3 +44,13 @@ After Retrospective, we like to work on some learning or side project hacking wo
 In the spirit of [Yvon Chouinard's "Let My People Go Surfing"](https://www.patagonia.com/product/let-my-people-go-surfing-revised-paperback-book/BK067.html), we take the last Friday of every month off, for a paid day off - or as we like to say, we take an extra 12 long weekends every year. The extra time off makes for a happy and refreshed team, and we find it's more than worth the investment.
 
 [You can read a bit more about Premium Friday here.](https://medium.com/sanctuary-computer-inc/12-extra-long-weekends-for-sanctuary-de46ed4c3f85)
+
+## Keeping this place running
+
+Our cleaner comes every couple of weeks, so in order to keep the workplace nice a slick, please remember to do the following stuff:
+
+- Wipe down tables if you make a mess
+- If you recieve packages, break down cardboard boxes and place next to the fridge 
+- Please be diligent about recycling - cans, plastic or glass go in the right side of the bin
+- If the dishwasher is cracked open, it's dirty, so use it! If it's closed shut, it's just finished cleaning, so please empty it.
+- If you use the last paper towel or toilet tissue, please replace the roll!

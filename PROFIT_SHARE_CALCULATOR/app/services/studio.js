@@ -122,7 +122,7 @@ export default Service.extend(
      */
     if (get(this, 'mode') === Modes.REAL) return get(this, 'actualLaborCost');
 
-    return get(this, 'technologists').reduce((a, tech) => a + get(tech, 'salary'), 0);
+    return get(this, 'technologists').reduce((a, tech) => a + get(tech, 'laborCostThisYear'), 0);
   }).readOnly(),
 
   monthlyLaborCost: computed('laborCost', 'mode', 'projectedLaborCost', function() {
