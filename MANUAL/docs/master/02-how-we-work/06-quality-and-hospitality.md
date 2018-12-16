@@ -7,7 +7,7 @@ category: How we work
 
 Technology companies aren't always that friendly. We're here to change that!
 
-![](https://scontent-iad3-1.cdninstagram.com/vp/762c1a01a1ac10fd2edf65324738bfaa/5BF4ED63/t51.2885-15/e35/28763913_1883783524966257_3362040866767110144_n.jpg)
+![](https://scontent-iad3-1.cdninstagram.com/vp/01ab5fece7d59c7716c04ff28fa0577c/5C932163/t51.2885-15/e35/28763913_1883783524966257_3362040866767110144_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com)
 *A boy and his bread (1/2)*
 
 ## The Big Reveal
@@ -40,5 +40,5 @@ For that reason, we stand by the following points:
 
 The way we describe our approach to client relationships is best described as Technical Hospitality, and [you can read more about it here](https://medium.com/sanctuary-computer-inc/technical-hospitality-pt-1-introduction-5313e940ae3).
 
-![](https://scontent-iad3-1.cdninstagram.com/vp/a7acb74921d22e062cae728df477204b/5C004955/t51.2885-15/e35/28433200_1147671932036284_6153962354414452736_n.jpg)
+![](https://scontent-iad3-1.cdninstagram.com/vp/2c5b8b580df664f16117e5e20bc410e1/5C9E7D55/t51.2885-15/e35/28433200_1147671932036284_6153962354414452736_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com)
 *A boy and his bread (2/2)*

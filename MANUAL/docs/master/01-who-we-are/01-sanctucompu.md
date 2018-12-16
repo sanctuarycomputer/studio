@@ -9,7 +9,7 @@ We're a different type of technology shop, and this is why.
 
 ## How we started
 
-![](https://scontent-iad3-1.cdninstagram.com/vp/a5c9c0d0fe58d3e213738d3e1a60b322/5C02D5A0/t51.2885-15/e35/25010428_160468251382157_672007509598273536_n.jpg)
+![](https://scontent-iad3-1.cdninstagram.com/vp/5443c2c448d333e196dfbabb6ef49c37/5CA109A0/t51.2885-15/e35/25010428_160468251382157_672007509598273536_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com)
 
 Sanctuary Computer is an artful user interface studio on the Bowery in New York City. We partner with some of NYC’s best design shops and startups, employ modern technologies, share profit, learn together, and push each other to be better.
 

@@ -7,7 +7,7 @@ category: How we work
 
 Sanctuary ebbs and flows with the tides of a weekly sprint. Here's how it works.
 
-![](https://scontent-iad3-1.cdninstagram.com/vp/e7d580737d9c318f555ed825f57e5ab0/5BFA78FC/t51.2885-15/e35/30085791_182652012381526_4517074223973269504_n.jpg)
+![](https://scontent-iad3-1.cdninstagram.com/vp/cd74792d3f902037b62c9ac2562f4acc/5C9B49D7/t51.2885-15/e35/42712476_2225052431099702_3929194680242805040_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com)
 
 ## Starting Times
 
