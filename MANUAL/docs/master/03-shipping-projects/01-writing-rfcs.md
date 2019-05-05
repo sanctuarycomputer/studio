@@ -1,6 +1,6 @@
 ---
 permalink: rfcs 
-category: Writing RFCs 
+category: Shipping projects
 ---
 
 # Writing RFCs 
