@@ -22,7 +22,7 @@ to set up an Asset Guidlines google doc, and work with them to pick
 through the designs, and identify all of the asset buckets. Hand this
 over to your client, and give them a hard deadline for when it's due.
 This deadline is different for every project: if there's a lot of content,
-I'd suggest telling them it should be done 60% point.
+We'd suggest telling them it should be done 60% point.
 
 ## Operator Manuals & Populating Content
 
@@ -35,7 +35,7 @@ You should work through the document to prepare a guide that your client
 can use to enter all of their content into their CMS, and understand all
 of the kinks that come along with wiring their site up.
 
-I like to use these documents to record the login credentials to any
+We like to use these documents to record the login credentials to any
 backend services they may need, and link out to the Asset Guidelines
 document too.
 
@@ -43,7 +43,7 @@ It's important that you force your client to do content population
 themselves. Doing it for them means they won't learn how their website
 works, and you'll have less time to build great work!
 
-Give them a deadline to have content populated by. I'd suggest by the
+Give them a deadline to have content populated by. We'd suggest by the
 ~80% point of the deadline. You can expect they'll miss it, so work
 with your project manager to apply appropriate pressure to get this
 done on time.
