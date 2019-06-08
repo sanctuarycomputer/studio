@@ -73,5 +73,17 @@ export default {
       projectedLaborCost: 345000,
       actualTotalPSUIssued: 84,
     }
+  }, {
+    title: "2018",
+    description: "We doubled our team!",
+    attrs: {
+      efficiencyCap: 1.6,
+      desiredPayrollBufferMonths: 1,
+      income: 1168836,
+      expenses: 304610,
+      actualLaborCost: 653351,
+      projectedLaborCost: 1008000,
+      actualTotalPSUIssued: 139,
+    }
   }]
 }
