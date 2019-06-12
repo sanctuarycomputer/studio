@@ -1,0 +1,31 @@
+{
+
+  "a": {
+    "id": 1,
+    "foo": "bar",
+    "baz": "bazgo",
+    "child": {
+      "id": 1,
+      "key": "value"
+    }
+  },
+
+  "b": {
+    "id": 1,
+    "foo": "bar",
+    "baz": "bazgo",
+    "children": [
+      {
+        "id": 1, 
+        "key": "value",
+        "optionalString": "hi there"
+      },
+      {
+        "id": 2,
+        "key": "value",
+        "optionalString": null
+      }
+    ]
+  }
+
+}
