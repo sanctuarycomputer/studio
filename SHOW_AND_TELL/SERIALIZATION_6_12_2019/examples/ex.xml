@@ -1,0 +1,35 @@
+<!-- No embedded type description -->
+<Parent>
+  <id>1</id>
+  <foo>baz</foo>
+  <baz>bazgo</baz>
+  <children>
+    <child>
+      <id>1</id>
+      <key>value</key>
+      <optionalString>hi there</optionalString>
+    </child>
+    <child>
+      <id>1</id>
+      <key>value</key>
+    </child>
+  </children>
+</Parent>
+
+<!-- Maybe something like this? -->
+<Parent type="Parent">
+  <id type="Integer">1</id>
+  <foo type="String">baz</foo>
+  <baz type="String">bazgo</baz>
+  <children type="Array">
+    <child type="Child">
+      <id>1</id>
+      <key>value</key>
+      <optionalString>hi there</optionalString>
+    </child>
+    <child type="Child">
+      <id>1</id>
+      <key>value</key>
+    </child>
+  </children>
+</Parent>

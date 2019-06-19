@@ -1,0 +1,36 @@
+{
+  "data": {
+    "id": 1,
+    "type": "parent",
+    "attributes": {
+      "foo": "bar",
+      "baz": "bazgo"
+    },
+    "relationships": {
+      "children": {
+        "data": [
+          {"type": "child", "id": 1},
+          {"type": "child", "id": 2}
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "child",
+      "id": 1,
+      "attributes": {
+        "key": "value",
+        "optionalString": "hi there"
+      }
+    },
+    {
+      "type": "child",
+      "id": 2,
+      "attributes": {
+        "key": "value",
+        "optionalString": null
+      }
+    }
+  ]
+}
