@@ -151,6 +151,12 @@ https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/
 
 https://webaim.org/articles/voiceover/
 
+## Videos: 
+
+- [Voice Control on Mac and iOS (Apple)](https://www.youtube.com/watch?v=aqoXFCCTfm4)
+- [Navigating Websites with JAWS](https://www.youtube.com/watch?v=3MUEyYoKwx0)
+- [Screen Reader Demo with Marc Sutton](https://www.youtube.com/watch?v=dEbl5jvLKGQ)
+
 ## Resources:
 
 - https://www.ada.gov/
@@ -158,3 +164,4 @@ https://webaim.org/articles/voiceover/
 - https://developer.mozilla.org/en-US/docs/Web/Accessibility
 - https://dequeuniversity.com/rules/axe/3.2/
 - https://validator.w3.org/
+- https://www.apple.com/accessibility/mac/vision/
