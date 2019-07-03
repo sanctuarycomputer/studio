@@ -1,0 +1,10 @@
+@import 'defaults';
+
+$color-definitions: ();
+@each $name, $color in $colors {
+  $color-definitions: map-merge($color-definitions, (
+    'color-#{$name}': ( color: $color ),
+    'bg-color-#{$name}': ( background-color: $color ),
+    'border-color-#{$name}': ( border-color: $color )
+  ));
+}

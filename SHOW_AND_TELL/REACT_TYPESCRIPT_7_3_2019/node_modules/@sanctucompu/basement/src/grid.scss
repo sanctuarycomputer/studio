@@ -1,0 +1,9 @@
+@import 'defaults';
+
+$grid-definitions: ();
+@for $i from 0 through $grid-columns {
+  $grid-definitions: map-merge($grid-definitions, (
+    'col-#{$i}': ( width: percentage($i / $grid-columns) ),
+    'off-#{$i}': ( margin-left: percentage($i / $grid-columns) )
+  ));
+}
