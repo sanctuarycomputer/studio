@@ -1,0 +1,40 @@
+.container{
+  display: grid;
+  grid-auto-columns: 60px;
+  grid-auto-rows: 60px;
+}
+
+.item1 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.item2 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.item3 {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+}
+
+.item4 {
+  grid-column: 5 / 6;
+  grid-row: 5 / 6;
+}
+
+.item5 {
+  grid-column: 7 / 8;
+  grid-row: 7 / 8;
+}
+
+.item6{
+  grid-column: 8 / 9;
+  grid-row: 10 / 11;
+}
+
+.item7 {
+  grid-column: 10 / 11;
+  grid-row: 10 / 11;
+}
