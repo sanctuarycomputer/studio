@@ -1,0 +1,36 @@
+.container {
+  grid-template-areas: 
+    "nav nav nav nav"
+    "menu main1 main1 main1"
+    "menu main2 . main3"
+    "menu . main4 main4"
+    "footer footer footer footer";
+}
+
+.item1 {
+  grid-area: main1;
+}
+
+.item2 {
+  grid-area: nav;
+}
+
+.item3 {
+  grid-area: footer;
+}
+
+.item4 {
+  grid-area: menu;
+}
+
+.item5 {
+  grid-area: main2;
+}
+
+.item6 {
+  grid-area: main3;
+}
+
+.item7 {
+  grid-area: main4;
+}

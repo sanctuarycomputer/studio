@@ -1,0 +1,43 @@
+.container {
+  font-family: sans-serif;
+  font-weight: 700;
+  width: 90vw;
+  height: 90vh;
+  border: solid 3px black;
+  margin: auto;
+}
+
+.item1 {
+  background-color: rgba(0, 0, 255, 0.5);
+  border: solid blue 1px;
+}
+
+.item2 {
+  background-color: rgba(255, 255, 0, 0.5);
+  border: solid yellow 1px;
+}
+
+.item3 {
+  background-color: rgba(255, 0, 0, 0.5);
+  border: solid red 1px;
+}
+
+.item4 {
+  background-color: rgba(0, 128, 0, 0.5);
+  border: solid green 1px;
+}
+
+.item5 {
+  background-color: rgba(135, 207, 235, 0.5);
+  border: solid skyblue 1px;
+}
+
+.item6 {
+  background-color: rgba(156, 205, 50, 0.5);
+  border: solid yellowgreen 1px;
+}
+
+.item7 {
+  background-color: rgba(255, 192, 204, 0.5);
+  border: solid pink 1px;
+}

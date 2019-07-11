@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+/* .container {
+  grid-template-columns: 20% 30% 40% 10%;
+  grid-template-rows: 1fr 2fr 5fr 4fr 3fr;
+}
+
+.container {
+  grid-template-columns: 100px 20rem 40% 5em;
+  grid-template-rows: auto;
+} */
