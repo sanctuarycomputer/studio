@@ -41,8 +41,12 @@ That said, a browser is a program we run on our computers, we don't want it to b
 Enter the SAME ORIGIN POLICY
 
 Same Origin Policy -- an important part of web app security model. Web page A is allowed to access any Data Resources
-from Web page B, so long as they have the same origin. This effectively quarantines websites.
-Note that media resources are not locked down in the same way.
+from Web page B, so long as they have the same origin. This effectively quarantines websites so
+scripts from external sites can't access cookies.
+Scripts only - media resources are not locked down in the same way.
+Still vulnerable to XSRF (cross-site request forgery) attacks, which make use of html
+tags (think scripts hidden in img tags, hidden forms, etc.)
+
 
 "origin" - URI scheme + hostname + port (if not 81)
 > document.location.origin  // => "http://localhost:3000"
@@ -72,6 +76,11 @@ Enter Cross-Origin Resource Sharing
   a browser to permit a resource from an external origin to be loaded
 * Enforces baseline security, so the entire internet is less vulnerable.
   Not a substitute for OAuth2 or cookies for protecting access to sensitive data
+* Originally developed by Tellme networks for VoiceXML in
+* Modern alternative to JSONP, which is vulnerable to cross-site scripting (XSS) issues
+  if the external site is compromised. (XSS is one way attackers can try to get background
+  the same-origin policy)
+  CORS allows websites to manually parse responses to increase security.
 
 
 Request Headers                   |  Response Headers
@@ -89,10 +98,28 @@ Request Headers                   |  Response Headers
 
 Anatomy of a CORS request
 * XMLHttpRequest object
+  - like fetch (https://github.com/github/fetch/blob/3674c98df696d45573750aa7873814887d25689a/fetch.js#L449)
+  - $.ajax() implements a jqXHR object, which is another superset of XMLHttpRequest
+  - Safari, Chrome, Firefox, Opera all implement a very similar XMLHttpRequest.
+  - IE has (had?) something similar called XDomainRequest
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'localhost:3000', true);
+xhr.onload(() => {
+  console.log('OK', xhr.responseText);
+});
+xhr.onerror(() => {
+  console.log('something went wrong');
+});
+xhr.withCredentials = true;
+xhr.send();
+
+* Jquery Ajax --  jqXHR object - actually uses a script tag under the hood
 
 
-* Jquery Ajax
-
+[DEMO]
+`node server.js`
+`ws` from directory with index.html
 
 ~ // ~ // ~ // ~ // ~ // ~ // ~
 
@@ -129,19 +156,27 @@ fetch('https://accounts.chase.com/balance.json', { mode: 'cors '}).then(res => {
 
 
 How To CORB:
-X-Content-Type-Options: nosniff response header
 Use CORS to explicitly allow access to the requested resource
+X-Content-Type-Options: nosniff response header
 
 ~ // ~ // ~ // ~ // ~ // ~ // ~
 
 [Scene 4]
-"Whatever. So how do I fix it".
-
-Basically, you need to enable CORS.
+"Whatever. So how do I get rid of the warning?".
+um, about that.
+The solution might be to add the nosniff header to the nxginx config
+`add_header X-Content-Type-Options nosniff;`
+The solution may be for Shopify storefront graphql api to implement cors restrictions
+Seems to not be a problem right now, since the OPTIONS response has the correct cors headers
+even if the content type its returning (text/html) is inappropriate
 
 ~ // ~ // ~ // ~ // ~ // ~ // ~
 
 Resources
+* https://www.chromium.org/Home/chromium-security/corb-for-developers
 * https://fetch.spec.whatwg.org/
 * https://www.html5rocks.com/en/tutorials/cors/
 * Wireshark http://www.wireshark.org/
+* https://www.prisma.io/blog/enabling-cors-for-express-graphql-apollo-server-1ef999bfb38d
+* https://medium.com/@alexishevia/using-cors-in-express-cac7e29b005b
+* https://geekflare.com/http-header-implementation/
