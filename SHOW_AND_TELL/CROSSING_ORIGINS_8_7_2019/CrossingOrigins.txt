@@ -1,0 +1,147 @@
+/////////////////////////////////////////////////////
+//     CROSSING ORIGINS
+//     An anecdotal journey from CORS to CORB
+//     and back again
+////////////////////////////////////////////////////
+
+[SCENE 1]
+It was July 10th, and one of our beloved clients had emailed us
+asking for some minor changes to their lovely Sanctuary Computer website,
+one of our tried and true Contentful / Shopify storefront API deals. So, like
+any good developer, I pulled down the latest master, and fired up a development
+server to see what was going on. I opened up the console, and was confronted with
+a warning I'd never seen before:
+
+"
+  bundle.esm.js:118
+  Cross-Origin Read Blocking (CORB) blocked cross-origin response
+  https://coffee-manufactory.myshopify.com/api/graphql with MIME type text/html.
+  See https://www.chromestatus.com/feature/5629709824032768 for more details.
+"
+
+After confirming the app was still able to read and persist data via the shopify storefront API,
+I still had some serious questions.
+CORB?
+1) Who dat. Is that a typo? Sounds kinda like CORS.
+2) ...and why do we need this acronym?
+3) How does it all work?
+4) Now let's get rid of that pesky error ~ !
+
+
+~ // ~ // ~ // ~ // ~ // ~ // ~
+
+[Scene 2]
+LETS REFRESH...
+
+Web pages don't exist in a silo. The internet would be a sad place... or well maybe just a different place
+if a website had to be self-sufficient, could only show what it had made itself.
+[example.html]
+
+That said, a browser is a program we run on our computers, we don't want it to be like the wild west!
+Enter the SAME ORIGIN POLICY
+
+Same Origin Policy -- an important part of web app security model. Web page A is allowed to access any Data Resources
+from Web page B, so long as they have the same origin. This effectively quarantines websites.
+Note that media resources are not locked down in the same way.
+
+"origin" - URI scheme + hostname + port (if not 81)
+> document.location.origin  // => "http://localhost:3000"
+
+Data Resources          |  Media Resources
+------------------------|--------------------
+* html                  |  * images
+* xml                   |  * fonts
+* json                  |  * javascript
+etc.                    |  * css
+
+[example.html]
+
+Things that are possible under the same-origin policy
+- load a font from an Google fonts
+- load an image from the internet
+- create a form that submits multipart form-data to an external api
+- load a script hosted by a different web page
+
+
+"OK, but we want to load data from exterior resources."
+For example, I want to display my Shopify Products.
+
+Enter Cross-Origin Resource Sharing
+
+* Set of specifications that determine the headers required for
+  a browser to permit a resource from an external origin to be loaded
+* Enforces baseline security, so the entire internet is less vulnerable.
+  Not a substitute for OAuth2 or cookies for protecting access to sensitive data
+
+
+Request Headers                   |  Response Headers
+----------------------------------|---------------------------------------
+- Origin                          |  - Access-Control-Allow-Origin
+- Access-Control-Request-Method   |  - Access-Control-Allow-Credentials
+- Access-Control-Request-Headers  |  - Access-Control-Expose-Headers
+                                  |  - Access-Control-Max-Age
+                                  |  - Access-Control-Allow-Methods
+                                  |  - Access-Control-Allow-Headers
+
+> CORS Decision Chart / CORS Flow Chart
+> Inspect requests in the network tab
+
+
+Anatomy of a CORS request
+* XMLHttpRequest object
+
+
+* Jquery Ajax
+
+
+~ // ~ // ~ // ~ // ~ // ~ // ~
+
+[Scene 3]
+So that's CORS. What the heck is CORB then?
+
+"Cross-Origin Resource-Blocking"
+One part of a many-pronged approach Chrome and other browsers took to defend users
+from Specter/Meltdown vulnerability discovered in January 2018. Added in Chrome 58+.
+- computers allow processes to share memory, and also execute as much code as possible optimistically
+  in an attempt to get the best performance possible
+- hackers found out a way to watch and benchmark operations being done by other processes
+  that share the same memory allocation. by observing relative execution times for processes
+  and comparing them to cache memory logs, they can guess secret data that should be out of bounds to them
+- this is a hardware problem, but since web apps are a primary way your computer comes into contact
+  with code written by others, the browsers have a lot of power to help protect folks
+
+
+In response, browsers set out to
+- Give each website its own renderer, so (imperfect, site !== origin, and also consumes more RAM)
+- Crack down on things that can be used as a highspeed clock in that context, like SharedArrayBuffer
+- Improve cookie health - http only option, avoid reading document.cookie
+- CORB
+
+An Example:
+<img src="https://accounts.chase.com/balance.json" /> // NOT ALLOWED
+
+The image won't render, but without CORB this json data will still be requested.
+If the user has a valid cookie for this site, and the server lacks origin access control restrictions,
+the request will succeed, the user's bank info will be loaded into memory, making
+it available to the renderer (and as a result anything else operating in that space).
+
+fetch('https://accounts.chase.com/balance.json', { mode: 'cors '}).then(res => { ... }); // ALLOWED!
+
+
+How To CORB:
+X-Content-Type-Options: nosniff response header
+Use CORS to explicitly allow access to the requested resource
+
+~ // ~ // ~ // ~ // ~ // ~ // ~
+
+[Scene 4]
+"Whatever. So how do I fix it".
+
+Basically, you need to enable CORS.
+
+~ // ~ // ~ // ~ // ~ // ~ // ~
+
+Resources
+* https://fetch.spec.whatwg.org/
+* https://www.html5rocks.com/en/tutorials/cors/
+* Wireshark http://www.wireshark.org/

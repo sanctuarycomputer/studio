@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script> -->
+  </head>
+  <body>
+    <h1>My website</h1>
+    <!-- <img width="200" src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6257/6257832_sd.jpg;maxHeight=640;maxWidth=550" /> -->
+    <p>The sky was cloudless and of a deep dark blue.</p>
+    <p id="secret"></p>
+
+    <script type="text/javascript">
+      var textNode = document.createTextNode("It's only temporary");
+      document.getElementById('secret').appendChild(textNode);
+
+      $(document).ready(() => {
+        this.setTimeout(() => {
+          $("#secret").fadeOut();
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
