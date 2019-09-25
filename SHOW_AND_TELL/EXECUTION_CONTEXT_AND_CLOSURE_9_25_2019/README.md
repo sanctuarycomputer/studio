@@ -1,4 +1,4 @@
-# Execution Context & Closure
+# Execution Context and Closure
 
 **Table of Contents**
 - [Overview of Execution Context](#overview-of-execution-context)
@@ -64,10 +64,10 @@ one();
 
 ## Closure
 - So far we've seen what happens we're calling a function in the same scope as it was defined
-- *Where we define our functions — **not** where we call it) — determines what variables the function has access to when we call the function
+  - *Where we define our functions* — **not** where we call it — determines what variables the function has access to when we call the function
 - When a function finishes executing and gets pops off the call stack, its local memory is deleted (automatic garbage collection), except the returned value.
-- *But, what if we call our function outside of where it was defined?*
-- If we return that function from another function and assign it to another variable, we can actually hold onto live data/state in between the executions.
+- So, what happens when we call our function outside of where it was defined?
+  - If we *return that function from another function and assign it to another variable*, we can actually hold onto live data/state in between the executions.
 
 - Example #2:
 [JavaScriptVisualizer: makeAdder](
@@ -87,15 +87,15 @@ https://tylermcginnis.com/javascript-visualizer?code=var%20count%20%3D%200%3B%0A
   ```
 
   - When we have an inner function inside a function, the inner function is going to create a **closure** over the variable environment of the parent function.
-  - When `inner()` is invoked, it has access to the parent’s variable environment even though the parent’s execution context has been removed from the stack.
-  - The variable `add5` is a function that takes the argument `y` and returns the sum of `x` and `y`.
+  - When `inner` (now assigned the variable `add5`) is invoked, it has access to the parent’s variable environment even though the parent’s execution context has been removed from the stack.
+  - `add5` takes an argument `y` and returns the sum of `x` (whose value it has access to in the closure scope) and `y`.
   > An inner function always has access to the variables and parameters of its outer function, even after the outer function has returned...
   
 - **Our functions that are defined inside other functions have “memories”** — i.e. can write functions that can be called a specified number of times, memoization, etc.
   - Example #3: [Once](once.js)
   - Example #4: [After](after.js)
 - **The power of closure**
-  - Helps us implement:
+  - Helps us implement OOP features:
     - **Encapsulation**: Restrict access to functions and state that are bound together inside the function
     - **Abstraction**: Hide all but the relevant data in order to reduce complexity and increase efficiency
     - Module design pattern in our apps
