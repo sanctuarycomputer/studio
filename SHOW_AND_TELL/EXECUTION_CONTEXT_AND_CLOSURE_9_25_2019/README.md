@@ -99,3 +99,9 @@ https://tylermcginnis.com/javascript-visualizer?code=var%20count%20%3D%200%3B%0A
     - **Encapsulation**: Restrict access to functions and state that are bound together inside the function
     - **Abstraction**: Hide all but the relevant data in order to reduce complexity and increase efficiency
     - Module design pattern in our apps
+
+- Learn more:
+  - [The Ultimate Guide to Hoisting, Scopes, and Closures in JavaScript](https://tylermcginnis.com/ultimate-guide-to-execution-contexts-hoisting-scopes-and-closures-in-javascript/)
+  - [Understanding Execution Context and Execution Stack in Javascript](https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0)
+  - [What is the Execution Context & Stack in JavaScript?](http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/)
+  - [JavaScript: The Hard Parts](https://frontendmasters.com/courses/javascript-hard-parts/)
