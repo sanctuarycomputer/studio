@@ -6,6 +6,7 @@ import ManagesScenarios from 'profit/mixins/manages-scenarios';
 const { computed, Service, get } = Ember;
 const Modes = { MOCK: 'mock', REAL: 'real' };
 const TAX_RATE = 0.36;
+const DEFAULT_FICA_TAX = 0.0765;
 
 export default Service.extend(
   ManagesTechnologists,
@@ -20,6 +21,7 @@ export default Service.extend(
   income: 0,
   efficiencyCap: 0,
   desiredPayrollBufferMonths: 0,
+  ficaPercentage: DEFAULT_FICA_TAX,
 
   /* Only used during "Modes.REAL" */
   actualLaborCost: 0,
@@ -37,7 +39,8 @@ export default Service.extend(
       actualLaborCost: 0,
       projectedLaborCost: 0,
       actualTotalPSUIssued: 0,
-      technologists: []
+      technologists: [],
+      ficaPercentage: DEFAULT_FICA_TAX
     });
   },
 
@@ -61,6 +64,7 @@ export default Service.extend(
     'maxValuePerPSU',
     'desiredPayrollBufferMonths',
     'totalPSUIssued',
+    'ficaPercentage',
   function() {
     let desiredBuffer
       = (get(this, 'monthlyLaborCost') * get(this, 'desiredPayrollBufferMonths') * (1 + TAX_RATE));
@@ -86,10 +90,20 @@ export default Service.extend(
           investment = pool - maxProfitBeforeInvestment;
           pool = maxProfitBeforeInvestment;
         }
+
+        /* See the application.hbs template for an explanation of FICA.
+         * Because FICA is applied ontop as a percentage, and we are working
+         * with the final digit ("pool"), we have to calculate this as a
+         * "reverse increasing percentage".
+         */
+        let poolAfterFicaWithholding = (pool / (1 + get(this, 'ficaPercentage')));
+
         return {
           buffer: desiredBuffer,
           upgradeBudget: desiredUpgradeBudget,
           pool,
+          ficaWithholding: (pool - poolAfterFicaWithholding),
+          poolAfterFicaWithholding,
           investment
         };
       }
@@ -100,6 +114,8 @@ export default Service.extend(
         buffer: desiredBuffer,
         upgradeBudget: (totalProfit - desiredBuffer),
         pool: 0,
+        ficaWithholding: 0,
+        poolAfterFicaWithholding: 0,
         investment: 0
       };
     }
@@ -110,6 +126,8 @@ export default Service.extend(
       buffer: totalProfit,
       upgradeBudget: 0,
       pool: 0,
+      ficaWithholding: 0,
+      poolAfterFicaWithholding: 0,
       investment: 0
     };
   }).readOnly(),
@@ -134,8 +152,8 @@ export default Service.extend(
     return get(this, 'laborCost') / 12;
   }).readOnly(),
 
-  actualValuePerPSU: computed('totalPSUIssued', 'allowances.pool', function() {
-    return get(this, 'allowances.pool') / get(this, 'totalPSUIssued');
+  actualValuePerPSU: computed('totalPSUIssued', 'allowances.poolAfterFicaWithholding', function() {
+    return get(this, 'allowances.poolAfterFicaWithholding') / get(this, 'totalPSUIssued');
   }).readOnly(),
 
   maxValuePerPSU: computed('efficiency', function() {
