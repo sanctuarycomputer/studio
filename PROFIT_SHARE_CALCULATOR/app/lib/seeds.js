@@ -87,5 +87,18 @@ export default {
       actualTotalPSUIssued: 139,
       ficaPercentage: 0 // By mistake, we did not factor in FICA in 2018
     }
+  }, {
+    title: "2019",
+    description: "Ummm, we're 16 people now...",
+    attrs: {
+      efficiencyCap: 1.75,
+      desiredPayrollBufferMonths: 1,
+      income: 1776824.28,
+      expenses: 324060.21,
+      actualLaborCost: 1010991.09,
+      projectedLaborCost: 1340413.92,
+      actualTotalPSUIssued: 250,
+      ficaPercentage: 0.0765
+    }
   }]
 }
