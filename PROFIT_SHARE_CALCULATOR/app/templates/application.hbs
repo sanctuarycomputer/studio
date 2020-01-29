@@ -196,23 +196,7 @@
 
     <div class='brick col col-12 sm-col-6 py1 center'>
       <div class='border-medium-gray inner p2'>
-        <h3 class='serif lighter'>Total PSU Issued</h3>
-        <p>The total PSU issed across the team</p>
-        <h4>{{studio.totalPSUIssued}}</h4>
-      </div>
-    </div>
-
-    <div class='brick col col-12 sm-col-6 py1 center'>
-      <div class='border-medium-gray inner p2'>
-        <h3 class='serif lighter'>Value per PSU</h3>
-        <p>How much profit each PSU is worth this year</p>
-        <h4>{{format-money studio.actualValuePerPSU}}</h4>
-      </div>
-    </div>
-
-    <div class='brick col col-12 sm-col-6 py1 center'>
-      <div class='border-medium-gray inner p2'>
-        <h3 class='serif lighter'>Total Profit Share Pool</h3>
+        <h3 class='serif lighter'>Gross Profit Share Pool</h3>
         <p>The money put aside for for profit sharing</p>
         <h4>{{format-money studio.allowances.pool}}</h4>
       </div>
@@ -226,7 +210,53 @@
       </div>
     </div>
 
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>FICA Withholding*</h3>
+        <p>The money we'll be charged in FICA tax</p>
+        <h4>{{format-money studio.allowances.ficaWithholding}}</h4>
+      </div>
+    </div>
+
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Profit Share Pool after FICA Withholding*</h3>
+        <p>The profit pool leaving our bank after FICA Withholding</p>
+        <h4>{{format-money studio.allowances.poolAfterFicaWithholding}}</h4>
+      </div>
+    </div>
+
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Total PSU Issued</h3>
+        <p>The total PSU issed across the team</p>
+        <h4>{{studio.totalPSUIssued}}</h4>
+      </div>
+    </div>
+
+    <div class='brick col col-12 sm-col-6 py1 center'>
+      <div class='border-medium-gray inner p2'>
+        <h3 class='serif lighter'>Value per PSU</h3>
+        <p>How much profit each PSU is worth this year</p>
+        <h4>{{format-money studio.actualValuePerPSU}}</h4>
+      </div>
+    </div>
   </div>
+
+  <div class='clearfix px2 mb3'>
+    <h2>*A Note on FICA</h2>
+    <hr />
+    <p class='line-height'>
+    When paying bonuses, we need to account for <a href="https://www.accountingcoach.com/terms/F/federal-insurance-contributions-act" target="_blank">FICA tax</a>. FICA is an amount paid on on top of any payments to an employee of a business for the sake of Social Security and Medicare tax. Provided the employee hasn't made over a certain threshold with in tax year ($136k at the time of writing) the FICA tax is <strong>7.65%</strong>.
+    </p>
+    <p class='line-height'>
+    You may notice that FICA tax was not withheld in the year 2017 and 2018 historical scenarios. This was an oversight on my behalf! I had assumed this would be taken out by JustWorks when the payments were scheduled, but it was added on top of the bonuses for those years. In 2017, the FICA amount was low enough that I didn't notice, but in 2018 it was roughly $3,901.24. We endevour to pay out as much profit as humanly possible, while not putting the business at risk, so we need to start accounting for it at the time of this calculation.
+    </p>
+    <p>
+    - Hugh
+    </p>
+  </div>
+
   <div class='clearfix px2'>
     <div class='col col-12'>
       <img class='fit full' src='https://media.giphy.com/media/rBgYkVznFnkek/giphy.gif' />

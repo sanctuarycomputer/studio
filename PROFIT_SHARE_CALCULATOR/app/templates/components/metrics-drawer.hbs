@@ -33,6 +33,14 @@
   >
 </label>
 
+<label class='metric-input left-aligned block pb2'>
+    FICA Tax Percentage
+  <input
+    value={{studio.ficaPercentage}}
+    disabled=true
+  >
+</label>
+
 {{#if (eq studio.mode studio.Modes.MOCK)}}
   <label class='metric-input left-aligned block pb2'>
     Labor Cost (Computed)

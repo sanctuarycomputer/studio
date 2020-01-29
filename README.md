@@ -20,7 +20,7 @@ if you'd like to ask any questions, please reach out to **hugh@sanctuary.compute
 
 - 💸[Profit & Loss Statements](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_AND_LOSS)
 - 🙌[Profit Share Calculator](http://profit.sanctuary.computer/)
-- 📚[Work Manual](http://manual.sanctuary.computer)
+- 📚[Work Manual](https://github.com/sanctuarycomputer/studio/wiki)
 - 🥑[food.sanctuary.computer](https://food.sanctuary.computer)
 
 ### Products
@@ -34,7 +34,7 @@ if you'd like to ask any questions, please reach out to **hugh@sanctuary.compute
 - ⚡[Basement.css](https://github.com/sanctuarycomputer/basement)
 - 🌮[Brandibble.js](https://github.com/sanctuarycomputer/brandibble.js)
 - 🍔[Brandibble Redux](https://github.com/sanctuarycomputer/brandibble-redux)
-- 👩‍💻[WIP - Profit Share Calculator](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_SHARE_CALCULATOR)
+- 👩‍💻[Profit Share Calculator](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_SHARE_CALCULATOR)
 - 🖋[Medium RSS2JSON Microservice](https://github.com/sanctuarycomputer/medium-rss-to-json)
 - 📟[C++ MtpLite](https://github.com/sanctuarycomputer/MtpLite)
 - ⌚️[Node MtpLite](https://github.com/sanctuarycomputer/node-mtplite)
@@ -47,3 +47,4 @@ if you'd like to ask any questions, please reach out to **hugh@sanctuary.compute
 - 🐥[Twitter](https://twitter.com/sanctucompu)
 - ✏️[Medium](https://medium.com/sanctuary-computer-inc)
 - 🔌[Facebook](https://www.facebook.com/sanctucompu/)
+- ⚡[Twitch](https://www.twitch.tv/sanctucompu)

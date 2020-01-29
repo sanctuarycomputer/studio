@@ -72,6 +72,7 @@ export default {
       actualLaborCost: 346502.51,
       projectedLaborCost: 345000,
       actualTotalPSUIssued: 84,
+      ficaPercentage: 0 // By mistake, we did not factor in FICA in 2017
     }
   }, {
     title: "2018",
@@ -84,6 +85,20 @@ export default {
       actualLaborCost: 653351,
       projectedLaborCost: 1008000,
       actualTotalPSUIssued: 139,
+      ficaPercentage: 0 // By mistake, we did not factor in FICA in 2018
+    }
+  }, {
+    title: "2019",
+    description: "Ummm, we're 16 people now...",
+    attrs: {
+      efficiencyCap: 1.75,
+      desiredPayrollBufferMonths: 1,
+      income: 1776824.28,
+      expenses: 324060.21,
+      actualLaborCost: 1010991.09,
+      projectedLaborCost: 1340413.92,
+      actualTotalPSUIssued: 250,
+      ficaPercentage: 0.0765
     }
   }]
 }
