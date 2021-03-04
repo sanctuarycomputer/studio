@@ -7,6 +7,7 @@ const { computed, Service, get } = Ember;
 const Modes = { MOCK: 'mock', REAL: 'real' };
 const TAX_RATE = 0.36;
 const DEFAULT_FICA_TAX = 0.0765;
+const DEFAULT_INTERNALS_BUDGET_MULTIPLIER = 0.5;
 
 export default Service.extend(
   ManagesTechnologists,
@@ -22,6 +23,7 @@ export default Service.extend(
   efficiencyCap: 0,
   desiredPayrollBufferMonths: 0,
   ficaPercentage: DEFAULT_FICA_TAX,
+  internalsBudgetMultiplier: DEFAULT_INTERNALS_BUDGET_MULTIPLIER,
 
   /* Only used during "Modes.REAL" */
   actualLaborCost: 0,
@@ -40,7 +42,8 @@ export default Service.extend(
       projectedLaborCost: 0,
       actualTotalPSUIssued: 0,
       technologists: [],
-      ficaPercentage: DEFAULT_FICA_TAX
+      ficaPercentage: DEFAULT_FICA_TAX,
+      internalsBudgetMultiplier: DEFAULT_INTERNALS_BUDGET_MULTIPLIER
     });
   },
 
@@ -65,11 +68,12 @@ export default Service.extend(
     'desiredPayrollBufferMonths',
     'totalPSUIssued',
     'ficaPercentage',
+    'internalsBudgetMultiplier',
   function() {
     let desiredBuffer
       = (get(this, 'monthlyLaborCost') * get(this, 'desiredPayrollBufferMonths') * (1 + TAX_RATE));
 
-    let desiredUpgradeBudget      = get(this, 'monthlyLaborCost') * 0.5;
+    let desiredUpgradeBudget      = get(this, 'monthlyLaborCost') * get(this, 'internalsBudgetMultiplier');
     let totalProfit               = get(this, 'totalProfit');
     let maxProfitBeforeInvestment = get(this, 'totalPSUIssued') * get(this, 'maxValuePerPSU');
 

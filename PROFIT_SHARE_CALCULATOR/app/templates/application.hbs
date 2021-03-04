@@ -172,7 +172,7 @@
 
     <div class='brick col col-12 sm-col-6 py1 center'>
       <div class='border-medium-gray inner p2'>
-        <h3 class='serif lighter'>Normalized Efficiency</h3>
+        <h3 class='serif lighter'>Normalized Efficiency*</h3>
         <p>This metric is normalized to be more insightful</p>
         <h4>{{studio.efficiency}}</h4>
       </div>
@@ -242,6 +242,41 @@
       </div>
     </div>
   </div>
+
+  <div class='clearfix px2 mb3'>
+    <h2>*A Note on the Efficiency Cap</h2>
+    <hr />
+    <p class='line-height'>
+    The efficiency cap is best described as a "fudge factor". It takes the raw metric of "income / expenses", and normalizes it to a scale of 0 - 1. When we first introduced profit share, I wasn't sure if I nailed the math first time (hint: I didn't - see below for FICA tax info), so the efficiency cap number gives some play to ensure profit won't tank the ship.
+    </p>
+    <p class='line-height'>
+    To reach a "1" with normalized efficiency (and thus a $1,000 PSU valuation) we should have sold everyone's time for at least $5,200 per week (but ideally $7,000) for at least 40 weeks in a given year (bringing in $208,000 - $280,000 per year). Additionally, we approximate the total cost of a an employee as $2800 per week ($145,600 per year).
+    </p>
+    <p class='line-height'>
+    By this (crude) math, the efficiency cap should always be somewhere between 1.43 and 1.92. In the case we had a year with mostly $7,000 billing weeks, it will be higher to reflect that. In the case that we're billing mostly $5,200 weeks, it will be lower to reflect.
+    </p>
+    <p class='line-height'>
+    The efficiency cap strikes a balance between business stability and generosity, and thus needs to be set individuals who have a full perview of the business health, taxation concerns, invoices in the financial year, etc. As such, it is decided and set by the board of garden3d, which at the current time, is Hugh. As we introduce more folks to the partnership track of the collective, this number will be set collaboratively.
+    </p>
+    <p class='line-height'>
+    While I understand this human-set metric may read as muddying the purity of the program, it is a little too difficult to design a perfect algorithm when each studio in the group has different ways of billing and selling time, as well as equity trade programs, RnD and internal projects, subcontractor relationships, and other such non-perfect-world considerations that would make the math overly complex. Instead, it's worth noting that the individuals setting the efficiency cap are, by design, equally invested in the generosity of the program.
+    </p>
+    <p>
+    - Hugh
+    </p>
+  </div>
+
+  <div class='clearfix px2 mb3'>
+    <h2>*A Note on Individual Taxes</h2>
+    <hr />
+    <p class='line-height'>
+    The only legal way to pay profit share is as a bonus. That means, as a fulltime employee in the USA, the bonus is taxed as such. Please understand that your bonus will be taxed before it hits your bank account.
+    </p>
+    <p class='line-height'>
+    Depending on your resulting tax bracket, you may receive tax back in your tax return in the new financial year. If you'd like further advice here, please reach out to a tax expert.
+    </p>
+  </div>
+
 
   <div class='clearfix px2 mb3'>
     <h2>*A Note on FICA</h2>
