@@ -7,8 +7,8 @@ module.exports = function(deployTarget) {
   };
 
   ENV.s3 = {
-    accessKeyId: "AKIAJEX5PZ7ETTTTZ55Q",
-    secretAccessKey: "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",
+    accessKeyId: process.env.IAM_ACCESS_KEY_ID,
+    secretAccessKey: process.env.IAM_SECRET_ACCESS_KEY,
     bucket: 'profit.sanctuary.computer',
     region: 'us-east-1',
     filePattern: '**/*.{html,js,css,png,gif,ico,jpg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,otf}'

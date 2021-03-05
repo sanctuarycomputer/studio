@@ -21,6 +21,7 @@ if you'd like to ask any questions, please reach out to **hugh@sanctuary.compute
 - 💸[Profit & Loss Statements](https://github.com/sanctuarycomputer/studio/tree/master/PROFIT_AND_LOSS)
 - 🙌[Profit Share Calculator](http://profit.sanctuary.computer/)
 - 📚[Work Manual](https://github.com/sanctuarycomputer/studio/wiki)
+- 🖥[Wallpapers](https://github.com/sanctuarycomputer/studio/tree/master/GRAPHICS/BRAND/WALLPAPERS)
 - 🥑[food.sanctuary.computer](https://food.sanctuary.computer)
 
 ### Products
