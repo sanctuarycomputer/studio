@@ -15,7 +15,7 @@ module.exports = function(defaults) {
   var origin;
   switch (env) {
     case 'production':
-      origin = 'http://profit.sanctuary.computer/';
+      origin = 'https://profit.sanctuary.computer/';
       fingerprintOptions.prepend = origin;
     break;
   }
