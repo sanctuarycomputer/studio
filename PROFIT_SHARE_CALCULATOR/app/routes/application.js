@@ -22,6 +22,7 @@ export default Route.extend({
       set(this, 'controller.metricsDrawerOpen', true);
     },
     applyHistoricalScenario() {
+      this.get('store').findAll('profit_share_passes');
       get(this, 'studio').applyHistoricalScenario(...arguments);
       set(this, 'controller.metricsDrawerOpen', true);
     },
