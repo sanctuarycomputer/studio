@@ -9,6 +9,7 @@ export default Route.extend({
   setupController(controller) {
     set(controller, 'studio', get(this, 'studio'));
     set(controller, 'metricsDrawerOpen', false);
+    this.store.findAll('profit_share_passes');
   },
 
   actions: {
@@ -22,7 +23,7 @@ export default Route.extend({
       set(this, 'controller.metricsDrawerOpen', true);
     },
     applyHistoricalScenario() {
-      this.get('store').findAll('profit_share_passes');
+      // let result = this.get('store').peekRecord('profit_share_pass', 1);
       get(this, 'studio').applyHistoricalScenario(...arguments);
       set(this, 'controller.metricsDrawerOpen', true);
     },
