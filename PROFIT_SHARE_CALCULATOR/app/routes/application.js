@@ -6,10 +6,40 @@ export default Route.extend({
   studio: service(),
   notify: service(),
 
-  setupController(controller) {
+  model() {
+    return fetch('http://localhost:3000/api/profit_share_passes').then((response) => {
+      return response.json().then(function(data) {
+        const results =  data.map(item => {
+          return {
+            title: item.year.toString(),
+            attrs: {
+              efficiencyCap: item.efficiency_cap_from_snapshot,
+              desiredPayrollBufferMonths: item.desired_buffer_months,
+              income: item.gross_revenue,
+              expenses: item.gross_expenses - item.gross_payroll,
+              actualLaborCost: item.gross_payroll,
+              projectedLaborCost: item.projected_monthly_cost_of_doing_business,
+              actualTotalPSUIssued: item.total_psu_issued,
+              ficaPercentage: item.fica_tax_rate,
+              internalsBudgetMultiplier: item.internals_budget_multiplier
+            }
+          };
+        });
+        return results.sort((a, b) => {
+          return a.title.localeCompare(b.title);
+        });
+      });
+    }).catch((error) => {
+      console.error('Error fetching data from API:', error);
+      return [];
+    });
+  },
+
+  setupController(controller, model) {
     set(controller, 'studio', get(this, 'studio'));
     set(controller, 'metricsDrawerOpen', false);
-  },
+    set(controller, 'studio.historicalScenarios', model);
+  },    
 
   actions: {
     toggleMetricsDrawerOpenState() {
