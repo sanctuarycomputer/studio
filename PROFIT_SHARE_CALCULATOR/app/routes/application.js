@@ -16,7 +16,7 @@ export default Route.extend({
               efficiencyCap: item.efficiency_cap_from_snapshot,
               desiredPayrollBufferMonths: item.desired_buffer_months,
               income: item.gross_revenue,
-              expenses: item.gross_expenses - item.gross_payroll,
+              expenses: item.gross_expenses,
               actualLaborCost: item.gross_payroll,
               projectedLaborCost: item.projected_monthly_cost_of_doing_business,
               actualTotalPSUIssued: item.total_psu_issued,
