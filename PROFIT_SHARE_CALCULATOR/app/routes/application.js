@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import faker from 'faker';
+import config from '../config/environment';
 const { Route, inject: { service }, set, get } = Ember;
 
 export default Route.extend({
@@ -7,13 +8,13 @@ export default Route.extend({
   notify: service(),
 
   model() {
-    return fetch('http://localhost:3000/api/profit_share_passes').then((response) => {
+    return fetch(config.stacksOrigin).then((response) => {
       return response.json().then(function(data) {
         const results =  data.map(item => {
           return {
             title: item.year.toString(),
             attrs: {
-              efficiencyCap: item.efficiency_cap_from_snapshot,
+              efficiencyCap: item.efficiency_cap,
               desiredPayrollBufferMonths: item.desired_buffer_months,
               income: item.gross_revenue,
               expenses: item.gross_expenses,
