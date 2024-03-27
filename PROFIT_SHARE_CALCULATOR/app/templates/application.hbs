@@ -51,7 +51,6 @@
         <div class='brick col col-12 sm-col-6 py1 center {{if (eq scenario studio.selectedHistoricalScenario) "active"}}'>
           <div class='inner p2 border-medium-gray' {{action (route-action 'applyHistoricalScenario' scenario)}}>
             <h3 class='serif lighter'>{{scenario.title}}</h3>
-            <p>{{scenario.description}}</p>
           </div>
         </div>
       {{/each}}
