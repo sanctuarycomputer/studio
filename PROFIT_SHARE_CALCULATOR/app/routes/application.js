@@ -10,7 +10,7 @@ export default Route.extend({
   model() {
     return fetch(config.stacksOrigin).then((response) => {
       return response.json().then(function(data) {
-        const results =  data.map(item => {
+        return data.map(item => {
           return {
             title: item.year.toString(),
             attrs: {
@@ -25,9 +25,6 @@ export default Route.extend({
               internalsBudgetMultiplier: item.internals_budget_multiplier
             }
           };
-        });
-        return results.sort((a, b) => {
-          return a.title.localeCompare(b.title);
         });
       });
     }).catch((error) => {
