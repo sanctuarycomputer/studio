@@ -32,7 +32,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
-    // ENV.stacksOrigin = 'http://localhost:3000/api/profit_share_passes';
+    ENV.stacksOrigin = 'http://localhost:3000/api/profit_share_passes';
   }
 
   if (environment === 'test') {
