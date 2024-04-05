@@ -18,12 +18,10 @@ export default Route.extend({
               desiredPayrollBufferMonths: item.desired_buffer_months,
               income: item.gross_revenue,
               expenses: item.gross_expenses,
-              // TODO: replace placeholders (which are from 2022)
-              benefits: 329431.75,
-              subcontractors: 1151517.51,
-              preSpent: 26282.61,
-              preSpentReinvestment: 0,
-              //
+              benefits: item.gross_benefits,
+              subcontractors: item.subcontractors,
+              preSpent: item.pre_spent,
+              preSpentReinvestment: item.pre_spent_reinvestment,
               actualLaborCost: item.gross_payroll,
               // This isn't a true equivalency: projected_monthly_cost_of_doing_business takes
               // more than just payroll into account 

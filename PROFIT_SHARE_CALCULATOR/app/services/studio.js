@@ -168,7 +168,6 @@ export default Service.extend(
   // end
   /* Total cost of doing business */
   totalCostOfDoingBusiness: computed('actuallaborCost', 'expenses',  'benefits', 'subcontractors', 'preSpent', 'preSpentReinvestment', function() {
-    console.log(get(this, 'benefits'));
     return get(this, 'actualLaborCost') + get(this, 'expenses') + get(this, 'benefits') + get(this, 'subcontractors') - get(this, 'preSpent') - get(this, 'preSpentReinvestment');
   }).readOnly(),
 
