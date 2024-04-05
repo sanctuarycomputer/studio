@@ -1,15 +1,43 @@
 import Ember from 'ember';
 import faker from 'faker';
+import config from '../config/environment';
 const { Route, inject: { service }, set, get } = Ember;
 
 export default Route.extend({
   studio: service(),
   notify: service(),
 
-  setupController(controller) {
+  model() {
+    return fetch(config.stacksOrigin).then((response) => {
+      return response.json().then(function(data) {
+        return data.map(item => {
+          return {
+            title: item.year.toString(),
+            attrs: {
+              efficiencyCap: item.efficiency_cap,
+              desiredPayrollBufferMonths: item.desired_buffer_months,
+              income: item.gross_revenue,
+              expenses: item.gross_expenses,
+              actualLaborCost: item.gross_payroll,
+              projectedLaborCost: item.projected_monthly_cost_of_doing_business,
+              actualTotalPSUIssued: item.total_psu_issued,
+              ficaPercentage: item.fica_tax_rate,
+              internalsBudgetMultiplier: item.internals_budget_multiplier
+            }
+          };
+        });
+      });
+    }).catch((error) => {
+      console.error('Error fetching data from API:', error);
+      return [];
+    });
+  },
+
+  setupController(controller, model) {
     set(controller, 'studio', get(this, 'studio'));
     set(controller, 'metricsDrawerOpen', false);
-  },
+    set(controller, 'studio.historicalScenarios', model);
+  },    
 
   actions: {
     toggleMetricsDrawerOpenState() {

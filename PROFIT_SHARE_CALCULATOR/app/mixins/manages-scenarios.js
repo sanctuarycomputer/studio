@@ -7,8 +7,7 @@ export default Ember.Mixin.create({
   selectedHistoricalScenario: null,
 
   scenarios: Seeds.scenarios,
-  historicalScenarios: Seeds.historicalScenarios,
-
+  historicalScenarios: [],
   applyScenario(scenario) {
     set(this, 'income', parseFloat(scenario.profitIncurred(this).toFixed(2)));
     set(this, 'selectedScenario', scenario);
