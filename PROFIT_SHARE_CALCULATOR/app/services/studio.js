@@ -29,6 +29,10 @@ export default Service.extend(
   actualLaborCost: 0,
   projectedLaborCost: 0,
   actualTotalPSUIssued: 0,
+  benefits: 0,
+  subcontractors: 0,
+  preSpent: 0,
+  preSpentReinvestment: 0,
 
   reset() {
     this.setProperties({
@@ -47,8 +51,13 @@ export default Service.extend(
     });
   },
 
+  //   def raw_efficiency
+  //   @actuals[:gross_revenue].to_f / total_cost_of_doing_business
+  // end
   /* Computed Properties */
   rawEfficiency: computed('income', 'laborCost', 'expenses', function() {
+    if (get(this, 'mode') === Modes.REAL) return get(this, 'income') / (get(this, 'totalCostOfDoingBusiness'));
+
     return get(this, 'income') / (get(this, 'laborCost') + get(this, 'expenses'));
   }).readOnly(),
 
@@ -136,15 +145,30 @@ export default Service.extend(
     };
   }).readOnly(),
 
+  // TODO: rename me to reflect more than labor
   laborCost: computed('technologists.@each.salary', 'mode', 'actualLaborCost', function() {
     /* The Labor Cost attribute is concerned with determining the years
-     * effeciency, so in Modes.REAL we use the "actuaLaborCost" for that
+     * efficiency, so in Modes.REAL we use the "actualLaborCost" for that
      * year, rather than a computed projection, as the team may have changed
      * substantially that year.
      */
-    if (get(this, 'mode') === Modes.REAL) return get(this, 'actualLaborCost');
+    if (get(this, 'mode') === Modes.REAL) return get(this, 'totalCostOfDoingBusiness');
 
+    /* Modes.MOCK doesn't take anything other than payroll into account for cost*/
     return get(this, 'technologists').reduce((a, tech) => a + get(tech, 'laborCostThisYear'), 0);
+  }).readOnly(),
+
+    //   def total_cost_of_doing_business
+  //   @actuals[:gross_payroll].to_f +
+  //   @actuals[:gross_expenses].to_f +
+  //   @actuals[:gross_benefits].to_f +
+  //   @actuals[:gross_subcontractors].to_f -
+  //   @pre_spent - # Don't count prespent profit share against this
+  //   @pre_spent_reinvestment # Don't count prespent reinvestment against this
+  // end
+  /* Total cost of doing business */
+  totalCostOfDoingBusiness: computed('actuallaborCost', 'expenses',  'benefits', 'subcontractors', 'preSpent', 'preSpentReinvestment', function() {
+    return get(this, 'actualLaborCost') + get(this, 'expenses') + get(this, 'benefits') + get(this, 'subcontractors') - get(this, 'preSpent') - get(this, 'preSpentReinvestment');
   }).readOnly(),
 
   monthlyLaborCost: computed('laborCost', 'mode', 'projectedLaborCost', function() {
@@ -152,6 +176,8 @@ export default Service.extend(
      * so in Modes.REAL we use the most "up to date" projection for
      * salary costing, rather than actualLaborCost.
      */
+    // This is really projected_monthly_cost_of_doing_business in Stacks, which takes 
+    // more than labor into account
     if (get(this, 'mode') === Modes.REAL) return (get(this, 'projectedLaborCost') / 12);
     return get(this, 'laborCost') / 12;
   }).readOnly(),

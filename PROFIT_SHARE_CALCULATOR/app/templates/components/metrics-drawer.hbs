@@ -50,7 +50,37 @@
     Total PSU Issued (Computed)
     {{input value=studio.totalPSUIssued disabled=true}}
   </label>
-{{else}}
+{{/if}}  
+{{#if (eq studio.mode studio.Modes.REAL)}}
+<label class='metric-input left-aligned block pb2'>
+    Benefits
+    <input
+      value={{studio.benefits}}
+      oninput={{action 'setNumeric' 'benefits'}}
+    >
+  </label>
+  <label class='metric-input left-aligned block pb2'>
+    Subcontractors
+    <input
+      value={{studio.subcontractors}}
+      oninput={{action 'setNumeric' 'subcontractors'}}
+    >
+  </label>
+    <label class='metric-input left-aligned block pb2'>
+    Pre-spent profit share
+    <input
+      value={{studio.preSpent}}
+      oninput={{action 'setNumeric' 'pre_spent'}}
+    >
+  </label>
+  <label class='metric-input left-aligned block pb2'>
+    Pre-spent reinvestment budget
+    <input
+      value={{studio.preSpentReinvestment}}
+      oninput={{action 'setNumeric' 'pre_spent_reinvestment'}}
+    >
+  </label>
+{{/if}}  
   <label class='metric-input left-aligned block pb2'>
     Actualized Labor Cost
     <input
@@ -59,7 +89,7 @@
     >
   </label>
   <label class='metric-input left-aligned block pb2'>
-    Projected Labor Cost
+    Projected Monthly Cost of Doing Business
     <input
       value={{studio.projectedLaborCost}}
       oninput={{action 'setNumeric' 'projectedLaborCost'}}
@@ -72,4 +102,3 @@
       oninput={{action 'setNumeric' 'actualTotalPSUIssued'}}
     >
   </label>
-{{/if}}
