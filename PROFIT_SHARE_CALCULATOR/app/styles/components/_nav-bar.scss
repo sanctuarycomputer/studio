@@ -1,10 +1,10 @@
 .nav-bar {
   position: fixed;
-  background-color: white;
+  color: #eddb35;
   width: 100%;
-  height: 80px;
-  box-shadow: 0 0 15px 1px #2f2f2f;
+  height: 110px;
   z-index: 3;
+  background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #1d1126 80%, #1d1126 100%);
 
   .title {
     margin-left: auto;

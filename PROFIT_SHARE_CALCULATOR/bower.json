@@ -1,6 +1,4 @@
 {
   "name": "profit",
-  "dependencies": {
-    "Faker": "^4.1.0"
-  }
+  "dependencies": {}
 }
