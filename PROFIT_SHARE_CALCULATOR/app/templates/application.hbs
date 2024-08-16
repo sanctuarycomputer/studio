@@ -1,6 +1,6 @@
 {{nav-bar}}
 
-<div class='metrics-bar-trigger' {{action (route-action 'toggleMetricsDrawerOpenState')}}>
+<div class='metrics-bar-trigger hover-glow' {{action (route-action 'toggleMetricsDrawerOpenState')}}>
   {{#if metricsDrawerOpen}}
     Close
   {{else}}
@@ -26,14 +26,14 @@
     </p>
 
     <div class='brick col col-12 sm-col-6 py1 center {{if (eq studio.Modes.MOCK studio.mode) "active"}}'>
-      <div class='inner p2 border-medium-gray' {{action (route-action 'setMode' studio.Modes.MOCK)}}>
+      <div class='inner p2 border-medium-gray hover-glow' {{action (route-action 'setMode' studio.Modes.MOCK)}}>
         <h3 class='serif lighter'>Mock Mode</h3>
         <p>Play with the calculator to understand how it works!</p>
       </div>
     </div>
 
     <div class='brick col col-12 sm-col-6 py1 center {{if (eq studio.Modes.REAL studio.mode) "active"}}'>
-      <div class='inner p2 border-medium-gray' {{action (route-action 'setMode' studio.Modes.REAL)}}>
+      <div class='inner p2 border-medium-gray hover-glow' {{action (route-action 'setMode' studio.Modes.REAL)}}>
         <h3 class='serif lighter'>Real World Mode</h3>
         <p>Actually calculate profit share at the end of the year</p>
       </div>
@@ -67,7 +67,7 @@
       </p>
       {{#each studio.scenarios as |scenario|}}
         <div class='brick col col-12 sm-col-6 py1 center {{if (eq scenario studio.selectedScenario) "active"}}'>
-          <div class='inner p2 border-medium-gray' {{action (route-action 'applyScenario' scenario)}}>
+          <div class='inner p2 border-medium-gray hover-glow' {{action (route-action 'applyScenario' scenario)}}>
             <h3 class='serif lighter'>{{scenario.title}}</h3>
             <p>{{scenario.description}}</p>
           </div>
@@ -90,14 +90,14 @@
       {{#each studio.technologists as |technologist|}}
         <div class='technologist col col-12'>
           <div class='inner py1 clearfix flex'>
-            <div class='col col-2 flex items-center'>
+            <div class='col col-2 flex items-center pr1'>
               {{#if (eq editing technologist)}}
                 {{input value=technologist.name class='inline py1'}}
               {{else}}
                 <h3>{{technologist.name}}</h3>
               {{/if}}
             </div>
-            <div class='months col col-4 center flex items-center'>
+            <div class='months col col-4 center flex items-center pr1'>
               {{#if (eq editing technologist)}}
                 <input
                   value={{technologist.monthsAtSanctu}}
@@ -109,7 +109,7 @@
                 <h3>{{technologist.monthsAtSanctu}} Months / PSU</h3>
               {{/if}}
             </div>
-            <div class='salary col col-3 sm-col-4 center flex items-center'>
+            <div class='salary col col-3 sm-col-4 center flex items-center pr1'>
               {{#if (eq editing technologist)}}
                 <input
                   value={{technologist.salary}}
@@ -121,19 +121,19 @@
                 <h3>{{format-money technologist.salary}}</h3>
               {{/if}}
             </div>
-            <div class='profit col col-3 sm-col-4 flex items-center'>
+            <div class='profit col col-3 sm-col-4 flex items-center pr1'>
               <h3 class='dark-navy'>{{format-money technologist.profitShare}}</h3>
             </div>
 
-            <div class='col col-1 caps center xs-hide'>
+            <div class='col col-1 center xs-hide hover-fade'>
               {{#if (eq editing technologist)}}
-                <h6 {{action (route-action 'stopEditingTeamMember')}}>OK</h6>
+                <h5 {{action (route-action 'stopEditingTeamMember')}}>OK</h5>
               {{else}}
-                <h6 {{action (route-action 'editTeamMember' technologist)}}>Edit</h6>
+                <h5 {{action (route-action 'editTeamMember' technologist)}}>Edit</h5>
               {{/if}}
             </div>
-            <div class='col col-1 caps right-align xs-hide'>
-              <h6 {{action (route-action 'removeTeamMember' technologist)}}>Remove</h6>
+            <div class='col col-1 right-align xs-hide hover-fade'>
+              <h5 {{action (route-action 'removeTeamMember' technologist)}}>Remove</h5>
             </div>
           </div>
         </div>
@@ -145,8 +145,8 @@
         </div>
       {{/each}}
       <div class='col col-12 center py1 xs-hide' {{action (route-action 'addTeamMember')}}>
-        <div class='border-medium-gray inner py1 px3 clearfix center'>
-          <h3 class='white'>+ Add Team Member</h3>
+        <div class='border-medium-gray inner py1 px3 clearfix center hover-glow'>
+          <h3>+ Add Team Member</h3>
         </div>
       </div>
     </div>

@@ -1,19 +1,28 @@
 html {
+  color-scheme: dark !important;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, label, input {
-  color: var(--dark-gray);
-  font-family: "Atlas Grotesk", sans-serif;
-  &.lighter { font-weight: lighter; }
-}
+.lighter { font-weight: 400; }
 
 h1 { font-size: 3em; }
-a { color: var(--dark-navy); }
+a { color: var(--text-color); }
 p { &.line-height { line-height: 1.75em; } }
 
 hr {
   border-bottom: 0;
   border-style: solid;
-  border-color: var(--medium-gray);
+  border-color: var(--outline);
+  box-shadow: 0 0 4px #eddb3546;
+}
+
+a {
+  transition: all 150ms ease-in-out;
+}
+
+a:hover {
+  text-shadow: 0 0 8px var(--text-color);
 }

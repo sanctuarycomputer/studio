@@ -1,14 +1,14 @@
 .ember-notify-default .ember-notify {
-  font-family: "Atlas Grotesk", sans-serif;
-  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 0;
   font-size: 16px;
   line-height: 20px;
   padding: 18px;
+  box-shadow: 0 0 4px #eddb3546;
 
-  &.success { background-color: var(--dark-navy) }
-  &.info { background-color: var(--dark-navy) }
-  &.warning { background-color: var(--dark-navy) }
-  &.error { background-color: var(--dark-navy) }
+  &.success { background-color: var(--card-background) }
+  &.info { background-color: var(--card-background) }
+  &.warning { background-color: var(--card-background) }
+  &.error { background-color: var(--card-background) }
 }
 

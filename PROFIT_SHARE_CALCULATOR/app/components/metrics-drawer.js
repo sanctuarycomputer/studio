@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['metrics-drawer', 'px3'],
+  classNames: ['metrics-drawer'],
   classNameBindings: ['open'],
   actions: {
     setNumeric(label, value) {

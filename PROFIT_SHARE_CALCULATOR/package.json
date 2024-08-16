@@ -36,7 +36,7 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "~2.15.0-beta.1",
     "ember-export-application-global": "^2.0.0",
-    "ember-faker": "^1.1.1",
+    "ember-faker": "^2.0.1",
     "ember-load-initializers": "^1.0.0",
     "ember-notify": "^5.2.1",
     "ember-resolver": "^4.0.0",
@@ -50,5 +50,7 @@
     "node": "^4.5 || 6.* || >= 7.*"
   },
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@faker-js/faker": "^4.1.0"
+  }
 }
